@@ -1,0 +1,366 @@
+{
+  "suite": "MQN Tactile Design System",
+  "company": "Masteraid / Mastering Chain",
+  "version": "1.0.0",
+  "design_language": "Hardware-Accurate Skeuomorphic & Tactile Precision",
+  "tokens": {
+    "accent_color": "#FF007F",
+    "accent_name": "Pure Magenta Neon",
+    "font_family": "DSEG14 Classic Italic",
+    "knob_outer_diameter_px": 92.0,
+    "card_viewbox": "0 0 160 200",
+    "readout_viewbox": "0 0 84 32",
+    "tick_length_px": 7.5,
+    "outer_pointer_protrusion_px": 2.0,
+    "small_pot_radius_px": 23.0,
+    "small_pot_diameter_px": 46.0,
+    "small_pot_num_flutes": 6
+  },
+  "themes": [
+    "dark",
+    "light"
+  ],
+  "assembled_modules": [
+    {
+      "filename": "knob_single_readout_top.svg",
+      "description": "Single Pot + Top Readout (Standard EQ/Filter Channel)",
+      "viewBox": "0 0 160 200",
+      "dark_path": "dark/assembled/knob_single_readout_top.svg",
+      "light_path": "light/assembled/knob_single_readout_top.svg"
+    },
+    {
+      "filename": "knob_single_readout_bottom.svg",
+      "description": "Single Pot + Bottom Readout (Classic Figma Motion Layout)",
+      "viewBox": "0 0 160 200",
+      "dark_path": "dark/assembled/knob_single_readout_bottom.svg",
+      "light_path": "light/assembled/knob_single_readout_bottom.svg"
+    },
+    {
+      "filename": "knob_concentric_readout_top.svg",
+      "description": "Dual Concentric Pot + Top Readout (Parametric Gain + Freq Step)",
+      "viewBox": "0 0 160 200",
+      "dark_path": "dark/assembled/knob_concentric_readout_top.svg",
+      "light_path": "light/assembled/knob_concentric_readout_top.svg"
+    },
+    {
+      "filename": "knob_concentric_readout_bottom.svg",
+      "description": "Dual Concentric Pot + Bottom Readout (Parametric Gain + Freq Step)",
+      "viewBox": "0 0 160 200",
+      "dark_path": "dark/assembled/knob_concentric_readout_bottom.svg",
+      "light_path": "light/assembled/knob_concentric_readout_bottom.svg"
+    },
+    {
+      "filename": "knob_small_pot_label_top.svg",
+      "description": "Small Pot (Transparent, Label Top, Readout Bottom, Bold 6-Flute Scallop, Magenta Middle Tick)",
+      "viewBox": "0 0 72 88",
+      "knob_center": {
+        "x": 36.0,
+        "y": 47.0
+      },
+      "knob_radius": 23.0,
+      "angular_range": {
+        "min_deg": -135.0,
+        "zero_deg": 0.0,
+        "max_deg": 135.0
+      },
+      "dark_path": "dark/assembled/knob_small_pot_label_top.svg",
+      "light_path": "light/assembled/knob_small_pot_label_top.svg"
+    },
+    {
+      "filename": "knob_small_pot_readout_top.svg",
+      "description": "Small Pot (Transparent, Readout Top, Label Bottom, Bold 6-Flute Scallop, Magenta Middle Tick)",
+      "viewBox": "0 0 72 88",
+      "knob_center": {
+        "x": 36.0,
+        "y": 47.0
+      },
+      "knob_radius": 23.0,
+      "angular_range": {
+        "min_deg": -135.0,
+        "zero_deg": 0.0,
+        "max_deg": 135.0
+      },
+      "dark_path": "dark/assembled/knob_small_pot_readout_top.svg",
+      "light_path": "light/assembled/knob_small_pot_readout_top.svg"
+    },
+    {
+      "filename": "knob_small_pot_card_label_top.svg",
+      "description": "Small Pot on Beveled Card Plate (80x100, Label Top, Readout Bottom)",
+      "viewBox": "0 0 80 100",
+      "knob_center": {
+        "x": 40.0,
+        "y": 54.0
+      },
+      "knob_radius": 23.0,
+      "angular_range": {
+        "min_deg": -135.0,
+        "zero_deg": 0.0,
+        "max_deg": 135.0
+      },
+      "dark_path": "dark/assembled/knob_small_pot_card_label_top.svg",
+      "light_path": "light/assembled/knob_small_pot_card_label_top.svg"
+    },
+    {
+      "filename": "knob_small_pot_card_readout_top.svg",
+      "description": "Small Pot on Beveled Card Plate (80x100, Readout Top, Label Bottom)",
+      "viewBox": "0 0 80 100",
+      "knob_center": {
+        "x": 40.0,
+        "y": 54.0
+      },
+      "knob_radius": 23.0,
+      "angular_range": {
+        "min_deg": -135.0,
+        "zero_deg": 0.0,
+        "max_deg": 135.0
+      },
+      "dark_path": "dark/assembled/knob_small_pot_card_readout_top.svg",
+      "light_path": "light/assembled/knob_small_pot_card_readout_top.svg"
+    },
+    {
+      "filename": "vumeter_analog_200x132.svg",
+      "description": "Analog Needle VU Meter (-20 to +3 dB Scale, 0 VU at +11 deg, Pure Magenta Overload Zone)",
+      "viewBox": "0 0 200 132",
+      "pivot_point": {
+        "x": 100.0,
+        "y": 118.0
+      },
+      "angular_range": {
+        "min_deg": -44.0,
+        "zero_vu_deg": 11.0,
+        "max_deg": 44.0
+      },
+      "dark_path": "dark/assembled/vumeter_analog_200x132.svg",
+      "light_path": "light/assembled/vumeter_analog_200x132.svg"
+    },
+    {
+      "filename": "db_meter_with_readout.svg",
+      "description": "Compact Smoked-Glass Stereo 12-Segment LED dB Meter with Top 6-Cell 14-Segment Readout (84x160)",
+      "viewBox": "0 0 84 160",
+      "dark_path": "dark/assembled/db_meter_with_readout.svg",
+      "light_path": "light/assembled/db_meter_with_readout.svg"
+    },
+    {
+      "filename": "db_meter_ladder_only.svg",
+      "description": "Compact Smoked-Glass Stereo 12-Segment LED dB Meter Ladder (84x124)",
+      "viewBox": "0 0 84 124",
+      "dark_path": "dark/assembled/db_meter_ladder_only.svg",
+      "light_path": "light/assembled/db_meter_ladder_only.svg"
+    },
+    {
+      "filename": "btn_square_smoked_off.svg",
+      "description": "Squared Smoked-Glass Push Button \u2014 OFF / Tinted Unlit State (44x44)",
+      "viewBox": "0 0 44 44",
+      "dark_path": "dark/assembled/btn_square_smoked_off.svg",
+      "light_path": "light/assembled/btn_square_smoked_off.svg"
+    },
+    {
+      "filename": "btn_square_smoked_on.svg",
+      "description": "Squared Smoked-Glass Push Button \u2014 ON / Illuminated Magenta State (44x44)",
+      "viewBox": "0 0 44 44",
+      "dark_path": "dark/assembled/btn_square_smoked_on.svg",
+      "light_path": "light/assembled/btn_square_smoked_on.svg"
+    },
+    {
+      "filename": "btn_square_smoked_smashed.svg",
+      "description": "Squared Smoked-Glass Push Button \u2014 SMASHED / Press-and-Hold Shattered Glass Extreme Drive State (44x44)",
+      "viewBox": "0 0 44 44",
+      "dark_path": "dark/assembled/btn_square_smoked_smashed.svg",
+      "light_path": "light/assembled/btn_square_smoked_smashed.svg"
+    },
+    {
+      "filename": "ratio_bank_1176_horizontal.svg",
+      "description": "1176-Style 4-Button Squared Smoked-Glass Horizontal Ratio Selector Bank (4, 8, 12, 20)",
+      "viewBox": "0 0 194 44",
+      "dark_path": "dark/assembled/ratio_bank_1176_horizontal.svg",
+      "light_path": "light/assembled/ratio_bank_1176_horizontal.svg"
+    },
+    {
+      "filename": "ratio_bank_1176_vertical.svg",
+      "description": "1176-Style 4-Button Squared Smoked-Glass Vertical Ratio Selector Bank (4, 8, 12, 20)",
+      "viewBox": "0 0 44 194",
+      "dark_path": "dark/assembled/ratio_bank_1176_vertical.svg",
+      "light_path": "light/assembled/ratio_bank_1176_vertical.svg"
+    }
+  ],
+  "components": [
+    {
+      "filename": "plate_well_160x200.svg",
+      "name": "Chassis Plate Well",
+      "viewBox": "0 0 160 200",
+      "description": "Recessed beveled plate housing with metallic chamfer and drop shadows",
+      "dark_path": "dark/components/plate_well_160x200.svg",
+      "light_path": "light/components/plate_well_160x200.svg"
+    },
+    {
+      "filename": "readout_segmented_6cell.svg",
+      "name": "Segmented 6-Character Starburst Readout",
+      "viewBox": "0 0 84 32",
+      "description": "Beveled LED/VFD readout well with 6-cell 14-segment display (DSEG14 base64 embedded)",
+      "dark_path": "dark/components/readout_segmented_6cell.svg",
+      "light_path": "light/components/readout_segmented_6cell.svg"
+    },
+    {
+      "filename": "dial_ticks_single.svg",
+      "name": "Single Pot Continuous Dial Ticks",
+      "viewBox": "0 0 108 108",
+      "description": "11-step continuous radial tick marks (R=46.5 to 54.0, 7.5px length, stroke 1.4px)",
+      "dark_path": "dark/components/dial_ticks_single.svg",
+      "light_path": "light/components/dial_ticks_single.svg"
+    },
+    {
+      "filename": "dial_ticks_concentric_upper.svg",
+      "name": "Concentric Upper Gain Ticks",
+      "viewBox": "0 0 108 108",
+      "description": "9-step upper radial ticks with magenta active indicator",
+      "dark_path": "dark/components/dial_ticks_concentric_upper.svg",
+      "light_path": "light/components/dial_ticks_concentric_upper.svg"
+    },
+    {
+      "filename": "dial_ticks_concentric_lower.svg",
+      "name": "Concentric Lower Frequency Step Ticks",
+      "viewBox": "0 0 108 108",
+      "description": "5-step discrete frequency position dots (R=50.0px, magenta selected dot)",
+      "dark_path": "dark/components/dial_ticks_concentric_lower.svg",
+      "light_path": "light/components/dial_ticks_concentric_lower.svg"
+    },
+    {
+      "filename": "dial_ticks_concentric_complete.svg",
+      "name": "Concentric Complete Dual-Zone Dial Ticks",
+      "viewBox": "0 0 108 108",
+      "description": "Unified 9 upper gain ticks + 5 lower frequency position dots",
+      "dark_path": "dark/components/dial_ticks_concentric_complete.svg",
+      "light_path": "light/components/dial_ticks_concentric_complete.svg"
+    },
+    {
+      "filename": "rotor_single_knob.svg",
+      "name": "Single Knob Main Rotor",
+      "viewBox": "0 0 92 92",
+      "description": "Machined aluminum rotor body (R=46px, 92px diameter) with indicator line",
+      "dark_path": "dark/components/rotor_single_knob.svg",
+      "light_path": "light/components/rotor_single_knob.svg"
+    },
+    {
+      "filename": "rotor_concentric_outer_ring.svg",
+      "name": "Concentric Outer Knurled Collar",
+      "viewBox": "0 0 96 96",
+      "description": "Knurled outer ring (R=46px outer rim) with pointer strictly protruding 2px (R=48px)",
+      "dark_path": "dark/components/rotor_concentric_outer_ring.svg",
+      "light_path": "light/components/rotor_concentric_outer_ring.svg"
+    },
+    {
+      "filename": "rotor_concentric_inner_main.svg",
+      "name": "Concentric Inner Main Rotor",
+      "viewBox": "0 0 80 80",
+      "description": "Independent inner rotor (R=40px, 80px diameter) with inset cap and pointer line",
+      "dark_path": "dark/components/rotor_concentric_inner_main.svg",
+      "light_path": "light/components/rotor_concentric_inner_main.svg"
+    },
+    {
+      "filename": "rotor_small_pot.svg",
+      "name": "Small Pot Rotor (6-Flute Scallop with Circular Base Skirt)",
+      "viewBox": "0 0 46 46",
+      "description": "46x46px (R=23px) Flat monolithic small pot rotor with stepped circular base skirt, bold 6-flute scalloped head, and centered magenta notch",
+      "dark_path": "dark/components/rotor_small_pot.svg",
+      "light_path": "light/components/rotor_small_pot.svg"
+    },
+    {
+      "filename": "dial_ticks_small_pot.svg",
+      "name": "Small Pot Connected Tick Dial",
+      "viewBox": "0 0 68 68",
+      "description": "68x68px (R_arc=30.5px) 11-step radial tick marks with middle 0 deg tick in pure magenta",
+      "dark_path": "dark/components/dial_ticks_small_pot.svg",
+      "light_path": "light/components/dial_ticks_small_pot.svg"
+    },
+    {
+      "filename": "plate_well_80x100.svg",
+      "name": "Compact Chassis Plate Well (80x100)",
+      "viewBox": "0 0 80 100",
+      "description": "Modular half-width recessed plate housing for small pots",
+      "dark_path": "dark/components/plate_well_80x100.svg",
+      "light_path": "light/components/plate_well_80x100.svg"
+    },
+    {
+      "filename": "vumeter_bezel_well_200x132.svg",
+      "name": "Analog VU Meter Bezel Recessed Well",
+      "viewBox": "0 0 200 132",
+      "description": "Recessed beveled housing well with metallic drop shadow and inner highlight",
+      "dark_path": "dark/components/vumeter_bezel_well_200x132.svg",
+      "light_path": "light/components/vumeter_bezel_well_200x132.svg"
+    },
+    {
+      "filename": "vumeter_dial_face_scale.svg",
+      "name": "Analog VU Meter Dial Face & Scale",
+      "viewBox": "0 0 184 116",
+      "description": "Calibrated graduated face with magenta overload arc (+1 to +3 dB) and VU silkscreen",
+      "dark_path": "dark/components/vumeter_dial_face_scale.svg",
+      "light_path": "light/components/vumeter_dial_face_scale.svg"
+    },
+    {
+      "filename": "vumeter_needle_rotor.svg",
+      "name": "Analog VU Meter Needle Rotor & Pivot Cap",
+      "viewBox": "-10 -90 20 96",
+      "description": "Precision metallic needle arm and pivot hub cap centered at (0, 0) for direct SVG rotation",
+      "dark_path": "dark/components/vumeter_needle_rotor.svg",
+      "light_path": "light/components/vumeter_needle_rotor.svg"
+    },
+    {
+      "file": "readout_segmented_9cell.svg",
+      "name": "Segmented 9-Character Alphanumeric Readout",
+      "viewBox": "0 0 122 32",
+      "description": "Smoked-glass 9-cell 14-segment starburst readout with decimal-attached cell tokenizer"
+    },
+    {
+      "file": "readout_segmented_5cell.svg",
+      "name": "Segmented 5-Character Meter Readout",
+      "viewBox": "0 0 74 30",
+      "description": "Compact 5-cell 14-segment numeric readout for LUFS and True Peak loudness displays"
+    },
+    {
+      "file": "segmented_bezel_lens_6cell.svg",
+      "name": "Segmented Display Smoked Glass Bezel Well (84x32)",
+      "viewBox": "0 0 84 32",
+      "description": "Recessed bezel trench, smoked magenta-tinted glass lens, and top optical glare reflection"
+    },
+    {
+      "filename": "db_meter_ladder_only.svg",
+      "name": "Smoked-Glass 12-Segment Stereo LED dB Ladder (84x124)",
+      "viewBox": "0 0 84 124",
+      "description": "Compact 84x124px stereo 12-segment LED ladder inside a smoked magenta-tinted glass lens with #FF007F ghost cavities and bloom",
+      "dark_path": "dark/components/db_meter_ladder_only.svg",
+      "light_path": "light/components/db_meter_ladder_only.svg"
+    },
+    {
+      "filename": "db_meter_bezel_lens.svg",
+      "name": "Smoked-Glass dB Meter Bezel & Lens Housing (84x124)",
+      "viewBox": "0 0 84 124",
+      "description": "Empty 84x124px recessed bezel trench and smoked magenta-tinted glass lens with top optical glare",
+      "dark_path": "dark/components/db_meter_bezel_lens.svg",
+      "light_path": "light/components/db_meter_bezel_lens.svg"
+    },
+    {
+      "filename": "btn_square_smoked_off.svg",
+      "name": "Squared Smoked-Glass Push Button \u2014 OFF (44x44)",
+      "viewBox": "0 0 44 44",
+      "description": "44x44px squared push button with recessed bezel, magenta-tinted smoked glass lens, ghosted legend, and top optical glare",
+      "dark_path": "dark/components/btn_square_smoked_off.svg",
+      "light_path": "light/components/btn_square_smoked_off.svg"
+    },
+    {
+      "filename": "btn_square_smoked_on.svg",
+      "name": "Squared Smoked-Glass Push Button \u2014 ON (44x44)",
+      "viewBox": "0 0 44 44",
+      "description": "44x44px squared push button with backlit #FF007F smoked glass lens, neon bloom legend, and top optical glare",
+      "dark_path": "dark/components/btn_square_smoked_on.svg",
+      "light_path": "light/components/btn_square_smoked_on.svg"
+    },
+    {
+      "filename": "btn_square_smoked_smashed.svg",
+      "name": "Squared Smoked-Glass Push Button \u2014 SMASHED (44x44)",
+      "viewBox": "0 0 44 44",
+      "description": "44x44px squared push button with shattered tempered glass fractures, refracted shards, and white-hot overdriven core",
+      "dark_path": "dark/components/btn_square_smoked_smashed.svg",
+      "light_path": "light/components/btn_square_smoked_smashed.svg"
+    }
+  ]
+}

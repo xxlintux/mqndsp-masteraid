@@ -1,0 +1,33 @@
+[package]
+name = "masteraid"
+version = "1.0.0"
+edition = "2021"
+authors = ["MQN DSP"]
+license = "MIT"
+description = "Zero-latency analog mastering console plugin (CLAP / VST3)"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+path = "source/lib.rs"
+
+[workspace]
+members = ["xtask"]
+
+[dependencies]
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+nih_plug_vizia = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+
+[features]
+# The standalone test host is optional so plugin builds do not pull in ALSA/JACK.
+standalone = ["nih_plug/standalone"]
+
+[[bin]]
+name = "masteraid-app"
+path = "source/main.rs"
+required-features = ["standalone"]
+
+
+[profile.release]
+lto = "thin"
+strip = "symbols"
+

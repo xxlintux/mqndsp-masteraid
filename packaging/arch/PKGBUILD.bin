@@ -1,0 +1,24 @@
+# Maintainer: MQN DSP <contact@mqndsp.com>
+pkgname=masteraid-bin
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Vintage Analog Mastering Chain plugin (CLAP & VST3) - Binary Package"
+arch=('x86_64')
+url="https://github.com/xxlintux/mqndsp-masteraid"
+license=('Proprietary')
+depends=('glibc' 'libx11' 'libxcb' 'libxcursor' 'mesa')
+provides=('masteraid' 'masteraid-clap' 'masteraid-vst3')
+conflicts=('masteraid')
+source=("Masteraid.clap" "Masteraid.vst3")
+sha256sums=('SKIP' 'SKIP')
+
+package() {
+    # 1. Install CLAP plugin
+    install -Dm755 "${srcdir}/Masteraid.clap" \
+        "${pkgdir}/usr/lib/clap/Masteraid.clap"
+
+    # 2. Install VST3 bundle directory
+    install -d "${pkgdir}/usr/lib/vst3"
+    cp -R "${srcdir}/Masteraid.vst3" "${pkgdir}/usr/lib/vst3/"
+    chmod -R 755 "${pkgdir}/usr/lib/vst3/Masteraid.vst3"
+}

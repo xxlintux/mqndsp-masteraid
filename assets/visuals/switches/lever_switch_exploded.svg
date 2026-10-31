@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="640" height="380" style="background:#090B10; font-family:'Segoe UI', -apple-system, sans-serif;">
+  <defs>
+    <filter id="exp-glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <linearGradient id="exp-hex-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6E7688" />
+      <stop offset="30%" stop-color="#464D5C" />
+      <stop offset="70%" stop-color="#282D38" />
+      <stop offset="100%" stop-color="#161920" />
+    </linearGradient>
+
+    <linearGradient id="exp-bushing-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#242934" />
+      <stop offset="50%" stop-color="#6A758C" />
+      <stop offset="100%" stop-color="#2C3240" />
+    </linearGradient>
+
+    <radialGradient id="exp-ball-grad" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="25%" stop-color="#C0CBE0" />
+      <stop offset="55%" stop-color="#6E788C" />
+      <stop offset="85%" stop-color="#343A48" />
+      <stop offset="100%" stop-color="#161822" />
+    </radialGradient>
+
+    <linearGradient id="exp-paddle-face" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#363C4A" />
+      <stop offset="25%" stop-color="#6E7B94" />
+      <stop offset="55%" stop-color="#9EABC4" />
+      <stop offset="85%" stop-color="#667288" />
+      <stop offset="100%" stop-color="#303542" />
+    </linearGradient>
+
+    <linearGradient id="exp-facet-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E2EDFC" />
+      <stop offset="100%" stop-color="#8E9AB4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Technical Header -->
+  <text x="320" y="32" fill="#00D2FF" font-size="12" font-weight="800" letter-spacing="2" text-anchor="middle">EXPLODED MECHANICAL ASSEMBLY &bull; 90&deg; ROTATION ARC PADDLE SWITCH</text>
+  <text x="320" y="48" fill="#586172" font-size="8.5" font-weight="600" letter-spacing="1" text-anchor="middle">FORESHORTENED 45&deg; THROW &bull; 3D BALL JOINT &bull; CLEAN PRO-AUDIO FLATTED PADDLE</text>
+
+  <!-- Main Exploded Assembly Axis Line -->
+  <line x1="80" y1="180" x2="560" y2="180" stroke="#161922" stroke-width="1.5" stroke-dasharray="4,4" />
+
+  <!-- PART 1: HEX NUT & BUSHING COLLAR (x = 120) -->
+  <g id="part-01-hex" transform="translate(120, 180)">
+    <circle cx="0" cy="0" r="16" fill="#141720" stroke="#252A36" stroke-width="1.2" />
+    <polygon points="0,-13 11.2,-6.5 11.2,6.5 0,13 -11.2,6.5 -11.2,-6.5" fill="url(#exp-hex-grad)" stroke="#0E1015" stroke-width="1.2" />
+    <polygon points="0,-12 10.2,-5.9 10.2,5.9 0,12 -10.2,5.9 -10.2,-5.9" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="0.7" />
+    <circle cx="0" cy="0" r="7.8" fill="url(#exp-bushing-grad)" stroke="#111318" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="5.6" fill="#06070A" stroke="#1D212A" stroke-width="0.8" />
+
+    <line x1="0" y1="25" x2="0" y2="110" stroke="#00D2FF" stroke-width="0.8" />
+    <text x="0" y="122" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">01. HEX MOUNTING NUT</text>
+    <text x="0" y="134" fill="#586172" font-size="7.5" text-anchor="middle">Threaded Bushing Collar</text>
+  </g>
+
+  <!-- Step Arrow 1->2 -->
+  <path d="M 170 180 L 200 180" stroke="#252B3A" stroke-width="1.2" />
+
+  <!-- PART 2: POLISHED 3D BALL JOINT (x = 245) -->
+  <g id="part-02-ball" transform="translate(245, 180)">
+    <circle cx="0" cy="0" r="6.5" fill="url(#exp-ball-grad)" stroke="#14161E" stroke-width="0.8" />
+
+    <line x1="0" y1="-20" x2="0" y2="-90" stroke="#00D2FF" stroke-width="0.8" />
+    <text x="0" y="-102" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">02. 3D BALL JOINT</text>
+    <text x="0" y="-90" fill="#586172" font-size="7.5" text-anchor="middle">Polished Metal Sphere</text>
+  </g>
+
+  <!-- Step Arrow 2->3 -->
+  <path d="M 285 180 L 315 180" stroke="#252B3A" stroke-width="1.2" />
+
+  <!-- PART 3: 45° ANGLED SLENDER TRAPEZOIDAL PADDLE (x = 380) -->
+  <g id="part-03-paddle" transform="translate(380, 180)">
+    <!-- Blade: 2.8px base to 9.2px tip, height 14px -->
+    <polygon points="-1.4,12 -4.6,-12 4.6,-12 1.4,12" fill="url(#exp-paddle-face)" stroke="#151820" stroke-width="0.8" />
+    
+    <!-- 45° Top Facet (1.8px) -->
+    <polygon points="-4.6,-12 -4.0,-14.8 4.0,-14.8 4.6,-12" fill="url(#exp-facet-grad)" stroke="#151720" stroke-width="0.6" />
+    <line x1="-3.8" y1="-14.2" x2="3.8" y2="-14.2" stroke="rgba(255,255,255,0.75)" stroke-width="0.7" />
+
+    <!-- Chamfers -->
+    <line x1="-4.6" y1="-12" x2="-1.4" y2="12" stroke="rgba(255,255,255,0.22)" stroke-width="0.6" />
+    <line x1="4.6" y1="-12" x2="1.4" y2="12" stroke="rgba(0,0,0,0.5)" stroke-width="0.7" />
+
+    <line x1="0" y1="25" x2="0" y2="110" stroke="#00D2FF" stroke-width="0.8" />
+    <text x="0" y="122" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">03. 45&deg; FORESHORTENED BLADE</text>
+    <text x="0" y="134" fill="#586172" font-size="7.5" text-anchor="middle">9.2px Tip &bull; Authentic Tilted Arc</text>
+  </g>
+
+  <!-- Step Arrow 3->4 -->
+  <path d="M 425 180 L 455 180" stroke="#252B3A" stroke-width="1.2" />
+
+  <!-- PART 4: SNUG 3-LABEL LAYOUT (x = 515) -->
+  <g id="part-04-labels" transform="translate(515, 180)" font-family="'Segoe UI', sans-serif">
+    <!-- Top label (SHELF) -->
+    <rect x="-24" y="-40" width="48" height="17" rx="3.5" fill="rgba(0,210,255,0.12)" stroke="#00D2FF" stroke-width="0.8" />
+    <text x="0" y="-28" fill="#00E5FF" font-size="8.5" font-weight="800" filter="url(#exp-glow-cyan)" text-anchor="middle">SHELF</text>
+
+    <!-- Mid label (BELL) -->
+    <text x="16" y="3" fill="#586172" font-size="8" font-weight="800">BELL</text>
+    <line x1="-6" y1="0" x2="6" y2="0" stroke="#3E4554" stroke-width="1.2" stroke-dasharray="2,2" />
+
+    <!-- Bottom label (OFF) -->
+    <text x="0" y="36" fill="#586172" font-size="8.5" font-weight="800" text-anchor="middle">OFF</text>
+
+    <line x1="0" y1="-48" x2="0" y2="-90" stroke="#00D2FF" stroke-width="0.8" />
+    <text x="0" y="-102" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">04. SNUG LABELS</text>
+    <text x="0" y="-90" fill="#586172" font-size="7.5" text-anchor="middle">Top: SHELF &bull; Side: BELL &bull; Bottom: OFF</text>
+  </g>
+
+  <!-- Bottom Legend -->
+  <rect x="50" y="335" width="540" height="28" rx="5" fill="#101218" stroke="#1A1F2C" stroke-width="1" />
+  <text x="320" y="353" fill="#727C90" font-size="8" font-weight="600" text-anchor="middle">90&deg; TOTAL ROTATION ARC (&plusmn;45&deg;) &bull; CLEAN SKEUOMORPHIC PADDLE</text>
+</svg>

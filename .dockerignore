@@ -1,0 +1,8 @@
+target/
+dist/
+.git/
+assets/
+PULLED FROM FIGMA/
+research/
+examples/
+tools/

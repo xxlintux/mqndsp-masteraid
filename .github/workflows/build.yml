@@ -1,0 +1,72 @@
+name: Build packages
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  linux-x86_64:
+    name: Linux x86_64 (Debian, Arch, Fedora)
+    # Build on the oldest supported glibc. Do not move this to a newer runner
+    # without checking that the artifact still runs on Ubuntu 22.04.
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Install Linux build dependencies & packagers
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pkg-config \
+            python3 \
+            rpm \
+            zstd \
+            dpkg-dev \
+            libx11-dev \
+            libx11-xcb-dev \
+            libxcb1-dev \
+            libxcb-icccm4-dev \
+            libxcb-util-dev \
+            libxcursor-dev \
+            libgl1-mesa-dev
+
+      - name: Test
+        run: cargo test --release
+
+      - name: Build and package (Universal, Debian, Arch, Fedora)
+        run: sh ./scripts/package-linux.sh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MQN-Masteraid-linux-x86_64
+          path: |
+            dist/*.tar.gz
+            dist/*.deb
+            dist/*.pkg.tar.zst
+            dist/*.rpm
+            dist/*.sha256
+          if-no-files-found: error
+
+  windows-x64:
+    name: Windows x64
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Build and package
+        shell: pwsh
+        run: ./scripts/package.ps1
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MQN-Masteraid-windows-x64
+          path: dist/*.zip
+          if-no-files-found: error

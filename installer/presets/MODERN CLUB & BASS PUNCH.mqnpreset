@@ -1,0 +1,27 @@
+PRESET:MODERN CLUB & BASS PUNCH
+tape_speed_30ips=0
+tape_formula_gp9=0
+tape_drive=3.000
+tape_bias=-2.000
+tape_bump=4.500
+tape_bump_freq=80.0
+tape_flutter=8.000
+clipper_drive=3.500
+clipper_ceiling=-0.200
+clipper_hard_shape=1
+clipper_os_4x=1
+eq_model=Mass
+comp_model=Fair
+comp_thresh=-12.000
+comp_ratio=4.000
+comp_attack=0.200
+comp_release=300.000
+comp_mix=90.000
+limiter_gain=4.000
+limiter_ceiling=-0.100
+limiter_lookahead=0.800
+limiter_release=0.000
+limiter_lift=0.000
+limiter_true_peak=1
+limiter_punch=1
+END_PRESET

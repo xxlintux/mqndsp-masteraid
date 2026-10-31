@@ -1,0 +1,13 @@
+Package: masteraid
+Version: 1.0.0
+Section: sound
+Priority: optional
+Architecture: amd64
+Depends: libc6 (>= 2.35), libx11-6, libxcb1, libxcursor1, libgl1
+Maintainer: MQN DSP <contact@mqndsp.com>
+Homepage: https://github.com/xxlintux/mqndsp-masteraid
+Description: Vintage Analog Mastering Chain plugin (CLAP and VST3)
+ Masteraid is a mastering chain plugin featuring analog tape saturation,
+ mastering clipper, 4-band Massive Passive EQ with continuous proportional-Q,
+ vintage dynamics (Fairchild / Variable-Mu), true-peak limiter, and dual
+ precision metering.

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="106" height="20" role="img" aria-label="OS: Windows">
+  <g shape-rendering="crispEdges">
+    <rect width="42" height="20" fill="#333333"/>
+    <rect x="42" width="64" height="20" fill="#0078D6"/>
+  </g>
+  <image x="4" y="3" width="14" height="14" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTMgNS40OEwxMC4zMyA0LjV2Ni41MkgzVjUuNDh6bTAgMTMuMDRsNy4zMy45OHYtNi41MkgzdjUuNTR6bTguMzMgMS4xTDIxIDIxVjExLjk4aC05LjY3djcuNjR6TTIxIDNsLTkuNjcgMS4zOFYxMUgyMVYzeiIvPjwvc3ZnPg=="/>
+  <g fill="#fff" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="500">
+    <text x="32.0" y="14" fill="#ddd">OS</text>
+    <text x="74.0" y="14" font-weight="700">Windows</text>
+  </g>
+</svg>

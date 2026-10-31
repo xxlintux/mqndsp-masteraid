@@ -1,0 +1,100 @@
+# Rust target build output
+/target/
+**/*.rs.bk
+
+# Packaged release binaries and installers
+/dist/
+
+# Agent work directories & temporary session files
+.agents/
+.gemini/
+
+# Internal research and development notes
+/research/
+*.notes
+*.notes.md
+*_notes.md
+/notes/
+/docs/internal/
+/drafts/
+*.draft
+*.draft.md
+*_draft.*
+draft_*
+
+# Scrap, scratch, experimental scripts & preview artifacts
+/scratch/
+/scrap/
+/experimental/
+/experiments/
+scratch_*
+scrap_*
+experimental_*
+*_scratch.*
+*_scrap.*
+*_experimental.*
+*.experimental.*
+/tmp/
+/temp/
+*.tmp
+*.temp
+*_test_preview.*
+*_preview.*
+*_comparison.*
+/preview/
+/assets/preview*
+/assets/test*
+/assets/tmp*
+/assets/gui/
+/assets/knobwork_tactile_suite/
+/assets/mqn_suite/
+/PULLED FROM FIGMA/
+
+# Temporary binaries, dumps, traces, crash reports
+*.dump
+*.dmp
+*.stackdump
+*.core
+core
+*.bin
+!**/PKGBUILD.bin
+*.log
+*.trace
+*.prof
+*.profdata
+*.profraw
+crash_dumps/
+target/shots_*/
+*.pdb
+*.ilk
+*.exp
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env/
+
+# Private developer notes, local environment & credentials
+/private/
+*.local
+*.env
+.env*
+!**/.env.example
+*.secret
+*.key
+*.pem
+credentials/
+secrets/
+
+# OS and Editor metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.bak

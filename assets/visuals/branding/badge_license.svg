@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="102" height="20" role="img" aria-label="License: MIT">
+  <g shape-rendering="crispEdges">
+    <rect width="62" height="20" fill="#333333"/>
+    <rect x="62" width="40" height="20" fill="#10B981"/>
+  </g>
+  <image x="4" y="3" width="14" height="14" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTEyIDJhMTAgMTAgMCAwIDAtNy4wNyAxNy4wN2wyLjgzLTIuODNBNiA2IDAgMSAxIDEyIDE4YTYgNiAwIDAgMS0yLjgzLS43MWwtMi44MyAyLjgzQTEwIDEwIDAgMSAwIDEyIDJ6Ii8+PC9zdmc+"/>
+  <g fill="#fff" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="500">
+    <text x="42.0" y="14" fill="#ddd">License</text>
+    <text x="82.0" y="14" font-weight="700">MIT</text>
+  </g>
+</svg>

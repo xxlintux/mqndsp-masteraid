@@ -1,0 +1,27 @@
+PRESET:DEFAULT MASTER
+tape_speed_30ips=1
+tape_formula_gp9=0
+tape_drive=0.000
+tape_bias=0.000
+tape_bump=0.000
+tape_bump_freq=60.0
+tape_flutter=0.000
+clipper_drive=0.000
+clipper_ceiling=-0.100
+clipper_hard_shape=0
+clipper_os_4x=1
+eq_model=Ptek
+comp_model=Fair
+comp_thresh=0.000
+comp_ratio=2.000
+comp_attack=10.000
+comp_release=100.000
+comp_mix=100.000
+limiter_gain=0.000
+limiter_ceiling=-0.100
+limiter_lookahead=1.000
+limiter_release=0.000
+limiter_lift=0.000
+limiter_true_peak=1
+limiter_punch=0
+END_PRESET

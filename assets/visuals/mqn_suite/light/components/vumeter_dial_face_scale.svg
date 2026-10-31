@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186 118" width="186" height="118">
+  <defs>
+    
+  <!-- UPSTREAM 14-SEGMENT DISPLAY SMOKED GLASS LENS GRADIENT -->
+  <linearGradient id="mqn_smoked_lens_grad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#E2DED6"/>
+    <stop offset="100%" stop-color="#D4D0C8"/>
+  </linearGradient>
+
+  <!-- UPSTREAM 14-SEGMENT HARDWARE VFD/LED BLOOM FILTER -->
+  <filter id="dseg_bloom" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="soft_bloom"/>
+    <feColorMatrix in="soft_bloom" type="matrix" values="
+      1 0 0 0 0
+      0 1 0 0 0
+      0 0 1 0 0
+      0 0 0 0.75 0" result="tinted_bloom"/>
+    <feMerge>
+      <feMergeNode in="tinted_bloom"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+    
+  <!-- MQN VU METER GRADIENTS & FILTERS -->
+  <linearGradient id="mqn_vu_bezel_grad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2E2E33"/>
+    <stop offset="100%" stop-color="#1C1C20"/>
+  </linearGradient>
+
+  <linearGradient id="mqn_vu_cavity_grad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#16060E"/>
+    <stop offset="100%" stop-color="#0D0308"/>
+  </linearGradient>
+
+  <linearGradient id="mqn_vu_front_glass_tint" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FF007F" stop-opacity="0.04"/>
+    <stop offset="50%" stop-color="#16060E" stop-opacity="0.05"/>
+    <stop offset="100%" stop-color="#0D0308" stop-opacity="0.12"/>
+  </linearGradient>
+
+  <linearGradient id="mqn_vu_glass_glare" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.12"/>
+    <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.03"/>
+    <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+  </linearGradient>
+
+  <linearGradient id="mqn_vu_needle_grad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#DFC5D2"/>
+    <stop offset="60%" stop-color="#B898A8"/>
+    <stop offset="100%" stop-color="#5E4652"/>
+  </linearGradient>
+
+  <linearGradient id="mqn_vu_pivot_grad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#261820"/>
+    <stop offset="100%" stop-color="#0E070B"/>
+  </linearGradient>
+
+  <filter id="mqn_vu_bezel_shadow" x="-15%" y="-15%" width="130%" height="135%">
+    <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+  </filter>
+
+  <filter id="mqn_vu_needle_shadow" x="-50%" y="-20%" width="200%" height="140%">
+    <feDropShadow dx="2" dy="2" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/>
+  </filter>
+
+  <filter id="mqn_vu_arch_backlight" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="3.0" result="soft_glow"/>
+  </filter>
+
+  <filter id="mqn_vu_subtle_bloom" x="-25%" y="-25%" width="150%" height="150%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1.1" result="blur"/>
+    <feColorMatrix in="blur" type="matrix" values="
+      1 0 0 0 0
+      0 1 0 0 0
+      0 0 1 0 0
+      0 0 0 0.45 0" result="dim_blur"/>
+    <feMerge>
+      <feMergeNode in="dim_blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  </defs>
+  <clipPath id="vu_face_clip"><rect x="0.0" y="0.0" width="186" height="118" rx="10.5"/></clipPath>
+<g id="vumeter_dial_face_scale" clip-path="url(#vu_face_clip)">
+  <rect x="0.0" y="0.0" width="186" height="118" rx="10.5" fill="#D8D4CC"/>
+  <path id="vumeter_arc_safe" d="M 33.26 49.14 A 86.0 86.0 0 0 1 109.41 26.58" fill="none" stroke="#4A4246" stroke-width="1.35" stroke-opacity="0.88" stroke-linecap="round"/>
+  <path id="vumeter_arc_overload" d="M 109.41 26.58 A 86.0 86.0 0 0 1 152.74 49.14" fill="none" stroke="#FF1E8E" stroke-width="2.2" stroke-linecap="round" opacity="1.0"/>
+  <line id="vumeter_tick_-44" data-deg="-44" data-val="-20" x1="33.26" y1="49.14" x2="39.16" y2="55.25" stroke="#4A4246" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.92"/>
+  <text id="vumeter_val_-44" x="25.97" y="41.58" font-family="'SF Mono', Consolas, Menlo, monospace" font-variant-numeric="tabular-nums" font-size="6.8" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#5A5054" opacity="0.92">-20</text>
+  <line id="vumeter_tick_-33" data-deg="-33" data-val="-10" x1="46.16" y1="38.87" x2="49.16" y2="43.49" stroke="#4A4246" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.68"/>
+  <text id="vumeter_val_-33" x="40.44" y="30.07" font-family="'SF Mono', Consolas, Menlo, monospace" font-variant-numeric="tabular-nums" font-size="6.8" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#5A5054" opacity="0.68">-10</text>
+  <line id="vumeter_tick_-22" data-deg="-22" data-val="-7" x1="60.78" y1="31.26" x2="62.84" y2="36.36" stroke="#4A4246" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.68"/>
+  <text id="vumeter_val_-22" x="56.85" y="21.53" font-family="'SF Mono', Consolas, Menlo, monospace" font-variant-numeric="tabular-nums" font-size="6.8" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#5A5054" opacity="0.68">-7</text>
+  <line id="vumeter_tick_-11" data-deg="-11" data-val="-5" x1="76.59" y1="26.58" x2="77.64" y2="31.98" stroke="#4A4246" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.68"/>
+  <text id="vumeter_val_-11" x="74.59" y="16.27" font-family="'SF Mono', Consolas, Menlo, monospace" font-variant-numeric="tabular-nums" font-size="6.8" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#5A5054" opacity="0.68">-5</text>
+  <line id="vumeter_tick_0" data-deg="0" data-val="-3" x1="93.00" y1="25.00" x2="93.00" y2="33.50" stroke="#4A4246" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.92"/>
+  <text id="vumeter_val_0" x="93.00" y="14.50" font-family="'SF Mono', Consolas, Menlo, monospace" font-variant-numeric="tabular-nums" font-size="6.8" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#5A5054" opacity="0.92">-3</text>
+  <line id="vumeter_tick_11" data-deg="11" data-val="0" x1="109.41" y1="26.58" x2="107.79" y2="34.92" stroke="#4A4246" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.92"/>
+  <text id="vumeter_val_11" x="111.41" y="16.27" font-family="'SF Mono', Consolas, Menlo, monospace" font-variant-numeric="tabular-nums" font-size="6.8" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#5A5054" opacity="0.92">0</text>
+  <line id="vumeter_tick_22" data-deg="22" data-val="+1" x1="125.22" y1="31.26" x2="123.16" y2="36.36" stroke="#FF1E8E" stroke-width="1.4" stroke-linecap="round" stroke-opacity="1.0"/>
+  <text id="vumeter_val_22" x="129.15" y="21.53" font-family="'SF Mono', Consolas, Menlo, monospace" font-variant-numeric="tabular-nums" font-size="6.8" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#FF2491" opacity="1.0">+1</text>
+  <line id="vumeter_tick_33" data-deg="33" data-val="+2" x1="139.84" y1="38.87" x2="136.84" y2="43.49" stroke="#FF1E8E" stroke-width="1.4" stroke-linecap="round" stroke-opacity="1.0"/>
+  <text id="vumeter_val_33" x="145.56" y="30.07" font-family="'SF Mono', Consolas, Menlo, monospace" font-variant-numeric="tabular-nums" font-size="6.8" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#FF2491" opacity="1.0">+2</text>
+  <line id="vumeter_tick_44" data-deg="44" data-val="+3" x1="152.74" y1="49.14" x2="146.84" y2="55.25" stroke="#FF1E8E" stroke-width="1.4" stroke-linecap="round" stroke-opacity="1.0"/>
+  <text id="vumeter_val_44" x="160.03" y="41.58" font-family="'SF Mono', Consolas, Menlo, monospace" font-variant-numeric="tabular-nums" font-size="6.8" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#FF2491" opacity="1.0">+3</text>
+  <text x="93.0" y="75.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" letter-spacing="1.5" text-anchor="middle" fill="#7A5268" opacity="0.80">VU</text>
+  <text x="93.0" y="87.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace" font-size="7.5" font-weight="700" letter-spacing="1.8" text-anchor="middle" fill="#FF2491" opacity="1.0">GR L</text>
+</g>
+</svg>

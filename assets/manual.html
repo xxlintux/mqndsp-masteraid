@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Masteraid - User Reference Manual</title>
+<style>
+  @page {
+    size: letter;
+    margin: 10mm 12mm 10mm 12mm;
+    @bottom-right {
+      content: counter(page);
+      font-size: 8pt;
+      color: #8E93A4;
+      font-weight: 600;
+    }
+  }
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1A1D24;
+    background: #FFFFFF;
+    line-height: 1.38;
+    font-size: 8.8pt;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #C00060;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: #FF007F;
+  }
+
+  /* Cover Header block */
+  .cover-header {
+    background: linear-gradient(135deg, #0A0B0E 0%, #151821 100%);
+    color: #FFFFFF;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border-left: 5px solid #FF007F;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    padding-bottom: 5px;
+    margin-bottom: 6px;
+  }
+
+  .cover-brand {
+    font-size: 14pt;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #FF007F;
+    text-transform: uppercase;
+  }
+
+  .cover-meta {
+    font-size: 7.6pt;
+    color: #9AA0B2;
+    text-align: right;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  .cover-title {
+    font-size: 20pt;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin: 0 0 2px 0;
+    color: #FFFFFF;
+  }
+
+  .cover-subtitle {
+    font-size: 9.4pt;
+    color: #D2D6E2;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .cover-note {
+    margin-top: 10px;
+    border-left: 4px solid #FF007F;
+    background: rgba(255, 0, 127, 0.12);
+    padding: 9px 13px;
+    border-radius: 4px;
+    color: #FFFFFF !important;
+    font-size: 8.2pt;
+    line-height: 1.38;
+  }
+
+  .cover-note strong {
+    color: #FF007F !important;
+  }
+
+  .cover-note a {
+    color: #FF66B2 !important;
+    text-decoration: underline;
+  }
+
+  .cover-note a strong {
+    color: #FF66B2 !important;
+  }
+
+  /* Table of Contents Index */
+  .toc-container {
+    background: #F8F9FC;
+    border: 1px solid #DCE1EB;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .toc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #FF007F;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+  }
+
+  .toc-title {
+    font-size: 8.8pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.0px;
+    color: #0C0D11;
+  }
+
+  .toc-hint {
+    font-size: 7.2pt;
+    color: #FF007F;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 16px;
+    font-size: 8.2pt;
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 1px 0;
+  }
+
+  .toc-num {
+    background: #FF007F;
+    color: #FFF;
+    font-size: 7.0pt;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-right: 6px;
+    flex-shrink: 0;
+  }
+
+  .toc-link {
+    color: #1A1D24;
+    font-weight: 600;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .toc-link:hover {
+    color: #FF007F;
+  }
+
+  /* Headings */
+  h2 {
+    font-size: 11pt;
+    font-weight: 800;
+    color: #0C0D11;
+    border-bottom: 2px solid #E5E7EB;
+    padding-bottom: 2px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    page-break-after: avoid;
+    break-after: avoid;
+    display: flex;
+    align-items: center;
+  }
+
+  h2 .sec-num {
+    background: #FF007F;
+    color: #FFF;
+    font-size: 7.8pt;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-right: 7px;
+    font-weight: 800;
+  }
+
+  h3 {
+    font-size: 9.4pt;
+    font-weight: 700;
+    color: #C00060;
+    margin-top: 7px;
+    margin-bottom: 3px;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  h4 {
+    font-size: 8.6pt;
+    font-weight: 700;
+    color: #2D3748;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 4px;
+    text-align: justify;
+  }
+
+  ul, ol {
+    margin-top: 2px;
+    margin-bottom: 4px;
+    padding-left: 16px;
+  }
+
+  li {
+    margin-bottom: 2px;
+  }
+
+  strong {
+    color: #0C0D11;
+  }
+
+  /* Signal flow diagram */
+  .diagram-container {
+    background: #0B0D12;
+    color: #E2E4EB;
+    border-radius: 5px;
+    padding: 6px 8px;
+    margin: 5px 0 6px 0;
+    border: 1px solid #232733;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .diagram-title {
+    font-size: 7.2pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #FF007F;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .flow-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .flow-node {
+    background: #22121E;
+    border: 1.5px solid #FF007F;
+    border-radius: 4px;
+    padding: 4px 3px;
+    text-align: center;
+    flex: 1;
+    min-width: 62px;
+    box-shadow: 0 0 6px rgba(255, 0, 127, 0.12);
+  }
+
+  .flow-node.highlight {
+    border-color: #FF007F;
+    background: #2A1125;
+    box-shadow: 0 0 8px rgba(255, 0, 127, 0.25);
+  }
+
+  .flow-node .fn-title {
+    font-size: 7.0pt;
+    font-weight: 800;
+    color: #FFFFFF;
+    display: block;
+  }
+
+  .flow-node .fn-sub {
+    font-size: 5.8pt;
+    color: #FF99CC;
+    display: block;
+    margin-top: 1px;
+  }
+
+  .flow-arrow {
+    color: #FF007F;
+    font-weight: 900;
+    font-size: 7.5pt;
+  }
+
+  /* Tables */
+  .table-box {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3px 0 5px 0;
+    font-size: 7.8pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .table-box th, .table-box td {
+    border: 1px solid #D9DDE5;
+    padding: 2.5px 5px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .table-box th {
+    background: #EFF2F7;
+    font-weight: 700;
+    color: #1A1D24;
+    text-transform: uppercase;
+    font-size: 6.8pt;
+    letter-spacing: 0.5px;
+  }
+
+  .table-box tr:nth-child(even) td {
+    background: #FAFAFC;
+  }
+
+  /* Callouts & Badges */
+  .callout {
+    background: #FFF5F9;
+    border-left: 3px solid #FF007F;
+    padding: 5px 9px;
+    margin: 5px 0;
+    font-size: 8.0pt;
+    border-radius: 0 4px 4px 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .callout.tip {
+    background: #F3F8FF;
+    border-left-color: #0070F3;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 6.6pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .badge-ptek {
+    background: #3B1627;
+    color: #FF5DA8;
+    border: 1px solid #FF007F;
+  }
+
+  .badge-mass {
+    background: #142838;
+    color: #55B5FF;
+    border: 1px solid #0088FF;
+  }
+
+  .badge-fair {
+    background: #382512;
+    color: #FFAE55;
+    border: 1px solid #FF8800;
+  }
+
+  .badge-vmu {
+    background: #153424;
+    color: #56DE95;
+    border: 1px solid #10B981;
+  }
+
+  .page-box {
+    page-break-before: always;
+    break-before: page;
+    min-height: 250mm;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2mm 0;
+  }
+
+  .page-box.first-page {
+    page-break-before: auto;
+    break-before: auto;
+  }
+
+  .page-box.flow-page {
+    display: block;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .section-block {
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .cover-hero {
+    text-align: center;
+    margin: 8px 0;
+    background: #0C0D11;
+    border: 1px solid #20242E;
+    border-radius: 6px;
+    padding: 6px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  }
+
+  .cover-hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Standard figures */
+  .manual-fig {
+    margin: 6px auto 8px auto;
+    text-align: center;
+    background: #0E1015;
+    border: 1px solid #20242E;
+    border-radius: 5px;
+    padding: 6px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .manual-fig img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .manual-fig-caption {
+    font-size: 7.2pt;
+    color: #8A8A92;
+    margin-top: 4px;
+    font-style: italic;
+  }
+
+  /* Sidebar Table Container for tall screenshots */
+  .sidebar-table-container {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin: 4px 0 6px 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .sidebar-col {
+    display: table-cell;
+    width: 175px;
+    vertical-align: top;
+    padding-right: 12px;
+  }
+
+  .main-col {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .sidebar-fig {
+    margin: 0 !important;
+    padding: 4px !important;
+    background: #0E1015;
+    border: 1px solid #20242E;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .sidebar-fig img {
+    width: 100%;
+    max-width: 165px;
+    height: auto;
+    border-radius: 3px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .sidebar-fig-caption {
+    font-size: 7.0pt;
+    color: #8A8A92;
+    margin-top: 4px;
+    line-height: 1.25;
+    font-style: italic;
+  }
+
+  /* Section 01 Compact Overview */
+  #sec-01 h2 {
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+
+  #sec-01 p {
+    margin-bottom: 4px;
+  }
+
+  #sec-01 .overview-fig {
+    margin: 8px auto 10px auto !important;
+    padding: 6px !important;
+    max-width: 720px;
+    text-align: center;
+    background: #0E1015;
+    border: 1px solid #20242E;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  #sec-01 .overview-fig img {
+    max-height: 250px !important;
+    width: auto;
+    max-width: 100%;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #sec-01 .diagram-container {
+    margin: 4px 0 6px 0 !important;
+    padding: 5px 8px !important;
+  }
+
+  code {
+    background: #ECEFF4;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 7.8pt;
+    color: #A00050;
+  }
+
+  .footer-note {
+    font-size: 7.4pt;
+    color: #6C7280;
+    border-top: 1px solid #E5E7EB;
+    padding-top: 4px;
+    margin-top: 8px;
+    text-align: center;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-box first-page">
+<!-- HEADER -->
+<div class="cover-header">
+  <div class="cover-top">
+    <div class="cover-brand">MQN DSP</div>
+    <div class="cover-meta">
+      MASTERAID V1.0 &bull; ENGINEERING REFERENCE MANUAL<br>
+      CLAP &bull; VST3 &bull; 64-BIT DOUBLE PRECISION
+    </div>
+  </div>
+  <div class="cover-title">Masteraid</div>
+  <div class="cover-subtitle">Modular Mastering Console &bull; Technical Reference Manual</div>
+  <div class="cover-note">
+    <strong style="color: #FF007F;">DSP Foundations &amp; Airwindows Algorithms:</strong>
+    Masteraid incorporates open-source DSP algorithms developed by <strong><a href="https://www.airwindows.com/" target="_blank" style="color: #FF66B2 !important; text-decoration: underline;"><strong style="color: #FF66B2 !important;">Chris Johnson (Airwindows)</strong></a></strong>, including non-linear saturation, slew rate filtering, and discrete stage modeling. To support his independent work, visit <a href="https://www.patreon.com/airwindows" target="_blank" style="color: #FF66B2 !important; text-decoration: underline;"><strong style="color: #FF66B2 !important;">patreon.com/airwindows</strong></a>.
+  </div>
+</div>
+
+  <div class="cover-hero">
+    <img src="visuals/screenshots/masteraid_header_split.png" alt="Masteraid Console Interface Overview (Hardware Dark &amp; Smoked-Glass Light Modes)">
+    <div class="manual-fig-caption" style="color: #9AA0B2; margin-top: 3px;">Figure 0.1 — Masteraid Dual-Theme Precision Analog Mastering Console (Dark Studio &amp; Smoked-Glass Light Modes)</div>
+  </div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc-container">
+  <div class="toc-header">
+    <span class="toc-title">Navigation Index</span>
+    <span class="toc-hint">Click any section to jump directly</span>
+  </div>
+  <div class="toc-grid">
+    <div class="toc-item">
+      <span class="toc-num">01</span>
+      <a href="#sec-01" class="toc-link">Console Architecture & Serial Flow</a>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">06</span>
+      <a href="#sec-06" class="toc-link">Top Deck: ATR-102 Analog Tape Machine</a>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">02</span>
+      <a href="#sec-02" class="toc-link">Left Wing: Input Stage & Filters</a>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">07</span>
+      <a href="#sec-07" class="toc-link">Top Deck: Precision 4x Mastering Clipper</a>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">03</span>
+      <a href="#sec-03" class="toc-link">Master Equalizer: PTEK vs MASS</a>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">08</span>
+      <a href="#sec-08" class="toc-link">Right Wing: Brickwall Limiter & LUFS</a>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">04</span>
+      <a href="#sec-04" class="toc-link">Master Dynamics: FAIR vs V-MU</a>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">09</span>
+      <a href="#sec-09" class="toc-link">Preset Engine & Cross-Platform Sharing</a>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">05</span>
+      <a href="#sec-05" class="toc-link">Analog Coloration Cassettes (Amps/Cores)</a>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">10</span>
+      <a href="#sec-10" class="toc-link">Themes, A/B Comparison & Shortcuts</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="page-box">
+<!-- SECTION 01 -->
+<div id="sec-01" class="section-block">
+  <h2><span class="sec-num">01</span> Console Architecture & Serial Signal Flow</h2>
+  <p>
+    <strong>Masteraid</strong> is a modular mastering console that brings together vacuum-tube and discrete transformer models, tape machine emulation, two switchable equalizers, two switchable variable-mu compressors, oversampled clipping, and a true-peak limiter in a 64-bit floating-point processing chain.
+  </p>
+  <div class="overview-fig">
+    <img src="visuals/screenshots/masteraid_gui_dark.png" alt="Masteraid Console Interface Overview">
+    <div class="manual-fig-caption">Figure 1.1 — Masteraid Full Rack Console Interface (Hardware Dark Mode)</div>
+  </div>
+  <p>
+    The signal flows in serial mastering order: input gain staging and corrective filtering come first, followed by equalization and compression, then tape saturation, peak clipping, and final true-peak limiting.
+  </p>
+  <div class="diagram-container">
+    <div class="diagram-title">Masteraid Serial Mastering Signal Path</div>
+    <div class="flow-row">
+      <div class="flow-node">
+        <span class="fn-title">INPUT WING</span>
+        <span class="fn-sub">Trim &bull; &Oslash; &bull; PPM</span>
+      </div>
+      <span class="flow-arrow">&rarr;</span>
+      <div class="flow-node">
+        <span class="fn-title">FILTERS</span>
+        <span class="fn-sub">12/24 dB &bull; Mono</span>
+      </div>
+      <span class="flow-arrow">&rarr;</span>
+      <div class="flow-node">
+        <span class="fn-title">MASTER EQ</span>
+        <span class="fn-sub">PTEK / MASS</span>
+      </div>
+      <span class="flow-arrow">&rarr;</span>
+      <div class="flow-node">
+        <span class="fn-title">DYNAMICS</span>
+        <span class="fn-sub">FAIR / V-MU</span>
+      </div>
+      <span class="flow-arrow">&rarr;</span>
+      <div class="flow-node highlight">
+        <span class="fn-title">ATR-102 TAPE</span>
+        <span class="fn-sub">15/30 IPS &bull; Dyn HF</span>
+      </div>
+      <span class="flow-arrow">&rarr;</span>
+      <div class="flow-node highlight">
+        <span class="fn-title">CLIPPER</span>
+        <span class="fn-sub">4x OS &bull; Soft/Hard</span>
+      </div>
+      <span class="flow-arrow">&rarr;</span>
+      <div class="flow-node">
+        <span class="fn-title">LIMITER</span>
+        <span class="fn-sub">True Peak &bull; LUFS</span>
+      </div>
+    </div>
+  </div>
+  <p>
+    <strong>Why this specific order matters:</strong> Equalizing before dynamics ensures the compressor sidechain reacts to the intended tonal balance rather than uncontrolled low-frequency peaks. Magnetic tape saturation adds progressive non-linear compression, and the clipper catches fast transient spikes so the limiter does not have to work as hard.
+  </p>
+</div>
+
+</div>
+
+<div class="page-box">
+<!-- SECTION 02 -->
+<div id="sec-02" class="section-block">
+  <h2><span class="sec-num">02</span> Left Wing: Input Stage & Master Filtering Controls</h2>
+  <p>
+    The left wing handles gain staging, bandwidth preparation, and stereo mono-compatibility auditing prior to downstream equalization, tape saturation, and dynamic control:
+  </p>
+  <div class="sidebar-table-container">
+    <div class="sidebar-col">
+      <div class="sidebar-fig">
+        <img src="visuals/screenshots/sec02_input_filters.png" alt="Left Wing Input Stage and Filtering Controls">
+        <div class="sidebar-fig-caption">Figure 2.1 — Input Stage, Trim, PPM/RMS Ladder &amp; Filter Network</div>
+      </div>
+    </div>
+    <div class="main-col">
+      <table class="table-box">
+        <thead>
+          <tr>
+            <th style="width: 24%;">Parameter</th>
+            <th style="width: 26%;">Range / Options</th>
+            <th style="width: 14%;">Default</th>
+            <th>Engineering Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>IN (Input Bypass)</strong></td>
+            <td>Engaged / Bypassed</td>
+            <td>Engaged</td>
+            <td>Section bypass toggle. When disengaged, trim and filtering are bypassed while input peak/RMS meters remain fully active.</td>
+          </tr>
+          <tr>
+            <td><strong>TRIM</strong></td>
+            <td>-10.0 dB to +10.0 dB</td>
+            <td>0.0 dB</td>
+            <td>Stepped input gain in 0.5 dB increments for fine gain staging into downstream analog stages.</td>
+          </tr>
+          <tr>
+            <td><strong>PHASE (&Oslash;)</strong></td>
+            <td>Normal / Inverted (180&deg;)</td>
+            <td>Normal</td>
+            <td>Inverts absolute polarity of the stereo bus to test phase correlation against references.</td>
+          </tr>
+          <tr>
+            <td><strong>MONO</strong></td>
+            <td>Stereo / Mono Sum</td>
+            <td>Stereo</td>
+            <td>Sums left and right channels to mono for quick phase-cancellation and compatibility checks.</td>
+          </tr>
+          <tr>
+            <td><strong>LO CUT (Highpass)</strong></td>
+            <td>20, 30, 40, 60, 80 Hz &bull; 12 / 24 dB/oct</td>
+            <td>OFF</td>
+            <td>Linkwitz-Riley highpass filter. Selectable 12 dB/oct (2nd order) or 24 dB/oct (4th order). Cleans up infrasonic rumble.</td>
+          </tr>
+          <tr>
+            <td><strong>HI CUT (Lowpass)</strong></td>
+            <td>14k, 16k, 18k, 20k, 24k Hz &bull; 12 / 24 dB/oct</td>
+            <td>OFF</td>
+            <td>Linkwitz-Riley lowpass filter. Selectable 12 dB/oct or 24 dB/oct slopes. Limits ultrasonic content before distortion stages.</td>
+          </tr>
+          <tr>
+            <td><strong>BASS MONO & AMT</strong></td>
+            <td>OFF, 40, 60, 80, 120, 160, 200 Hz &bull; 0..100%</td>
+            <td>OFF (70%)</td>
+            <td>Phase-aligned elliptical crossover (12 or 24 dB/oct) that narrows low frequencies below the corner frequency to mono.</td>
+          </tr>
+          <tr>
+            <td><strong>INPUT METERS</strong></td>
+            <td>-60.0 dBFS to +12.0 dBFS</td>
+            <td>Live</td>
+            <td>Dual bar meters displaying PPM instantaneous peak hold (0.7 s release) and 300 ms integrated RMS level.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="page-box">
+<!-- SECTION 03 -->
+<div id="sec-03" class="section-block">
+  <h2><span class="sec-num">03</span> Parametric Equalizer: PTEK Tube vs MASS Parametric</h2>
+  <p>
+    The equalizer stage features two distinct circuit topologies, selectable via the illuminated top model selector:
+  </p>
+  <div class="callout">
+    <strong>Model Selection:</strong> Switch between <span class="badge badge-ptek">PTEK</span> and <span class="badge badge-mass">MASS</span> at any time. Filter states crossfade smoothly without clicks.
+  </div>
+
+  <h3>PTEK Mode: Passive Program Tube Equalizer</h3>
+  <p>
+    PTEK models a passive LC inductor-capacitor filter network with vacuum tube makeup amplification based on the classic EQP-1A architecture:
+  </p>
+  <div class="manual-fig" style="max-width: 600px; margin: 6px auto;">
+    <img src="visuals/screenshots/sec03_eq_ptek.png" alt="PTEK Mode Program Equalizer Hardware Face">
+    <div class="manual-fig-caption">Figure 3.1 — PTEK Mode: Passive LC Filter Topology &amp; Program Tube Gain Makeup</div>
+  </div>
+  <ul>
+    <li><strong>Low-End Interaction (Simultaneous Boost &amp; Attenuation)</strong>: Because the boost and attenuation circuits use different corner frequencies and slopes, applying boost and cut together creates a resonant low-frequency shelf with a gentle dip near 250–400 Hz, clearing muddy lower-mid buildup while tightening the sub-bass.</li>
+    <li><strong>Low Frequency Selectors</strong>: Stepped selection at 20, 30, 40, 60, 100, and 150 Hz with continuous Boost (0..10 = +13.5 dB) and Attenuate (0..10 = -17.5 dB) controls.</li>
+    <li><strong>High Frequency Boost &amp; Attenuation</strong>: High boost provides 7 selectable center frequencies (3k, 4k, 5k, 8k, 10k, 12k, 16k Hz) and variable bandwidth (Q: 0 to 10). A separate high-frequency shelf attenuator operates at 5k, 10k, or 20k Hz (0 to -16.0 dB).</li>
+  </ul>
+
+  
+</div>
+</div>
+
+<div class="page-box">
+<div class="section-block">
+<h3>MASS Mode: Four-Band Parallel Parametric Mastering Equalizer</h3>
+  <p>
+    MASS is a 4-band parallel parametric mastering equalizer. Unlike serial biquad designs where phase shifts accumulate stage by stage, MASS uses a parallel topology where all four bands process the input independently and sum with the dry signal, maintaining consistent transient response and stereo correlation.
+  </p>
+  <div class="manual-fig" style="max-width: 600px; margin: 6px auto;">
+    <img src="visuals/screenshots/sec03_eq_mass.png" alt="MASS Mode 4-Band Parametric Equalizer Hardware Face">
+    <div class="manual-fig-caption">Figure 3.2 — MASS Mode: Four-Band Parallel Inductor Mastering Equalizer with Proportional-Q</div>
+  </div>
+  <table class="table-box">
+    <thead>
+      <tr>
+        <th style="width: 14%;">Band</th>
+        <th style="width: 26%;">Stepped Frequencies</th>
+        <th style="width: 16%;">Gain Range</th>
+        <th style="width: 14%;">Q Bandwidth</th>
+        <th>Mastering Focus &amp; Application</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>LOW</strong></td>
+        <td>33, 47, 68, 100, 150, 220 Hz</td>
+        <td>-9.0 to +9.0 dB</td>
+        <td>0.4 to 5.0</td>
+        <td>Sub-bass foundation, kick drum weighting, and infrasonic cleanup.</td>
+      </tr>
+      <tr>
+        <td><strong>LO MID (LMF)</strong></td>
+        <td>150, 220, 330, 470, 680, 1k Hz</td>
+        <td>-9.0 to +9.0 dB</td>
+        <td>0.4 to 5.0</td>
+        <td>Lower-midrange density, snare body, acoustic instrument resonance.</td>
+      </tr>
+      <tr>
+        <td><strong>HI MID (HMF)</strong></td>
+        <td>680, 1k, 1.5k, 2.2k, 3.3k, 4.7k Hz</td>
+        <td>-9.0 to +9.0 dB</td>
+        <td>0.4 to 5.0</td>
+        <td>Vocal articulation, snare attack, presence, and sibilance control.</td>
+      </tr>
+      <tr>
+        <td><strong>HIGH (HF)</strong></td>
+        <td>3.3k, 4.7k, 6.8k, 10k, 15k, 20k Hz</td>
+        <td>-9.0 to +9.0 dB</td>
+        <td>0.4 to 5.0</td>
+        <td>High-frequency air, cymbal extension, and top-end opening.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>Proportional-Q Characteristic Curve</h4>
+  <p>
+    Filter bandwidth adjusts proportionally to gain. Subtle adjustments (&plusmn;0.5 to &plusmn;2.0 dB) stay broad for gentle tonal shaping. As boost or cut increases toward &plusmn;9.0 dB, bandwidth progressively narrows for targeted correction without altering neighboring frequencies.
+  </p>
+
+  <h4>Hardware Controls &amp; Band Bypass</h4>
+  <ul>
+    <li><strong>Frequency Collar</strong>: 6-position stepped selector locking onto inductor frequency taps.</li>
+    <li><strong>Gain Rotor</strong>: &plusmn;9.0 dB continuous gain control with center detent at 0.0 dB.</li>
+    <li><strong>Q Trim Knob</strong>: Adjusts filter bandwidth from broad (0.4) to narrow (5.0).</li>
+    <li><strong>Shelf / Bell Toggle</strong>: Switches between <strong>SHELF</strong> (UP) and <strong>BELL</strong> curve (DOWN). In Shelf mode, the Q knob sets slope steepness.</li>
+    <li><strong>Band Bypass</strong>: Click the frequency/gain readout above each band to toggle it ON or OFF.</li>
+  </ul>
+</div>
+</div>
+
+<div class="page-box">
+<!-- SECTION 04 -->
+<div id="sec-04" class="section-block">
+  <h2><span class="sec-num">04</span> Mastering Dynamics: FAIR vs V-MU</h2>
+  <p>
+    The dynamics section provides variable-mu compression with program-dependent attack and recovery curves, providing cohesive program leveling across stereo stems.
+  </p>
+
+  <h3>FAIR Mode: Vintage Fairchild 670 Variable-Mu</h3>
+  <p>
+    FAIR mode emulates a push-pull variable-mu gain reduction circuit with feedback detection. It incorporates six standardized time constant presets (TC 1 through TC 6) with multi-slope recovery on settings 5 and 6, and adaptive release on low frequencies to prevent waveform distortion:
+  </p>
+  <div class="manual-fig" style="max-width: 600px; margin: 6px auto;">
+    <img src="visuals/screenshots/sec04_comp_fair.png" alt="FAIR Mode Variable-Mu Compressor Face">
+    <div class="manual-fig-caption">Figure 4.1 — FAIR Mode: Push-Pull Variable-Mu Topology with Calibrated Time Constants</div>
+  </div>
+  <table class="table-box">
+    <thead>
+      <tr>
+        <th style="width: 14%;">Time Constant</th>
+        <th style="width: 14%;">Attack Time</th>
+        <th style="width: 36%;">Recovery (Release) Characteristic</th>
+        <th>Recommended Application</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>TC 1</strong></td>
+        <td>0.2 ms</td>
+        <td>0.3 seconds</td>
+        <td>Fast transient control, aggressive drum and rhythmic punch.</td>
+      </tr>
+      <tr>
+        <td><strong>TC 2</strong></td>
+        <td>0.2 ms</td>
+        <td>0.8 seconds</td>
+        <td>Standard pop and rock bus leveling; general program cohesion.</td>
+      </tr>
+      <tr>
+        <td><strong>TC 3</strong></td>
+        <td>0.4 ms</td>
+        <td>2.0 seconds</td>
+        <td>Slower, flowing compression for acoustic, jazz, and vocal arrangements.</td>
+      </tr>
+      <tr>
+        <td><strong>TC 4</strong></td>
+        <td>0.8 ms</td>
+        <td>5.0 seconds</td>
+        <td>Macro-dynamic leveling for classical and wide-dynamic mixes.</td>
+      </tr>
+      <tr>
+        <td><strong>TC 5 (Auto)</strong></td>
+        <td>0.4 ms</td>
+        <td>Dual-stage automatic: 2.0s for short peaks, 10.0s for sustained signals.</td>
+        <td>Dynamic material with high-energy sections; prevents pumping.</td>
+      </tr>
+      <tr>
+        <td><strong>TC 6 (Auto)</strong></td>
+        <td>0.2 ms</td>
+        <td>Tri-stage automatic: 0.8s fast peaks, 3.0s medium, 25.0s sustained passage.</td>
+        <td>Full album mastering; transparent program-dependent leveling.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<div class="page-box">
+<div class="section-block">
+  <h3>V-MU Mode: Modern Variable-Mu Mastering Compressor</h3>
+  <p>
+    V-MU mode provides independent stepped control over envelope timing, compression ratio, and sidechain frequency weighting:
+  </p>
+  <div class="manual-fig" style="max-width: 600px; margin: 6px auto;">
+    <img src="visuals/screenshots/sec04_comp_vmu.png" alt="V-MU Mode Mastering Compressor Face">
+    <div class="manual-fig-caption">Figure 4.2 — V-MU Mode: Stepped Envelope Timing, SC HPF &amp; Parallel Wet/Dry Mix</div>
+  </div>
+  <ul>
+    <li><strong>Stepped Timing &amp; Ratio</strong>: Stepped Attack (Fast, M-Fast, Med, M-Slow, Slow), Recovery (Fast, Med, Slow, Auto), and Compress / Limit mode switch.</li>
+    <li><strong>Sidechain Highpass Filter (SC HPF)</strong>: Stepped 80 Hz / 100 Hz filter prevents heavy low frequencies from driving unnecessary gain reduction.</li>
+    <li><strong>Parallel MIX &amp; Automatic Makeup</strong>: 0% to 100% wet/dry blend for parallel compression, plus AUTO makeup gain compensation.</li>
+    <li><strong>Stereo Gain Reduction Meters</strong>: Left and right channel gain reduction displays responding with standard 300 ms integration time.</li>
+  </ul>
+</div>
+</div>
+
+<div class="page-box">
+<!-- SECTION 05 -->
+<div id="sec-05" class="section-block">
+  <h2><span class="sec-num">05</span> Analog Coloration Cassettes</h2>
+  <p style="margin: 2px 0 6px 0;">
+    Both the EQ and Dynamics sections feature an independent <strong>Hardware Coloration Cassette</strong> on their output stages, modeling discrete active amplifier topologies and output transformer magnetic saturation:
+  </p>
+
+  <div class="sidebar-table-container" style="margin: 4px 0 6px 0;">
+    <div style="display: table-cell; vertical-align: top; width: 73%; padding-right: 14px;">
+      <h3 style="margin: 0 0 3px 0; font-size: 9.0pt;">7 Active Amplifier Topologies</h3>
+      <ol style="margin: 2px 0 6px 0; padding-left: 18px; font-size: 8.0pt; line-height: 1.32;">
+        <li><strong>BYPASS</strong>: Linear signal transmission without added harmonic coloration.</li>
+        <li><strong>TRIODE (12AX7)</strong>: Single-ended triode circuit producing predominantly second-order harmonic distortion.</li>
+        <li><strong>PUSH-PULL TUBE</strong>: Balanced push-pull circuit where even-order harmonics cancel, leaving third-order harmonics.</li>
+        <li><strong>PENTODE (EF86)</strong>: High-gain pentode stage with extended upper-frequency harmonic distribution.</li>
+        <li><strong>FET (1176 Style)</strong>: Field-effect transistor circuit with fast transient snap and odd-order harmonics under drive.</li>
+        <li><strong>MOSFET</strong>: Solid-state circuit providing soft-clipping saturation characteristics with low intermodulation.</li>
+        <li><strong>GERMANIUM DIODE</strong>: Non-linear diode conduction profile with progressive low-level compression and soft high-frequency rounding.</li>
+      </ol>
+
+      <h3 style="margin: 6px 0 3px 0; font-size: 9.0pt;">5 Transformer Core Types</h3>
+      <ul style="margin: 2px 0 6px 0; padding-left: 18px; font-size: 8.0pt; line-height: 1.32;">
+        <li><strong>BYPASS</strong>: Transformerless electronic output.</li>
+        <li><strong>STEEL CORE</strong>: Silicon steel lamination producing low-frequency harmonic distortion and magnetic hysteresis.</li>
+        <li><strong>HIGH-NICKEL CORE</strong>: Nickel alloy core offering low phase distortion and wide frequency linearity.</li>
+        <li><strong>AMORPHOUS ALLOY</strong>: Non-crystalline magnetic core with fast transient response and high-frequency extension beyond 30 kHz.</li>
+        <li><strong>MU-METAL</strong>: High-permeability nickel-iron shielding alloy providing flat response and subtle low-level magnetic saturation.</li>
+      </ul>
+    </div>
+    <div style="display: table-cell; vertical-align: middle; width: 27%; text-align: center;">
+      <div class="sidebar-fig" style="margin: 0 auto; max-width: 175px;">
+        <img src="visuals/screenshots/sec05_cassette_dark.png" alt="Hardware Coloration Cassette Face" style="width: 100%; height: auto; border-radius: 4px;">
+        <div class="sidebar-fig-caption">Figure 5.1 — Hardware Coloration Cassette Face</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout tip" style="margin-top: 6px;">
+    <strong>Coloration Controls &amp; Operation (PUSH, HOLD AUTO &amp; LEARN):</strong>
+    <ul style="margin: 3px 0 2px 0; padding-left: 18px; font-size: 8.0pt; line-height: 1.34;">
+      <li><strong>PUSH (Drive Tiers)</strong>: Direct click cycles between three calibrated saturation stages: <strong>Subtle</strong> (nominal operating point), <strong>Pushed</strong> (+4.5 dB core drive with rich harmonic density), and <strong>Smashed</strong> (+11.5 dB extreme drive pushing tubes and transformers into aggressive non-linear saturation).</li>
+      <li><strong>AUTO (Level Neutrality)</strong>: Click to toggle automatic level compensation ON or OFF using the latched trim values.</li>
+      <li><strong>Hold AUTO (Learn Mode)</strong>: Press and hold the AUTO button while playing program material. Masteraid runs three background shadow stages to measure the exact power ratio across Subtle, Pushed, and Smashed tiers simultaneously. The resulting level trims are permanently latched per amplifier/transformer pairing.</li>
+      <li><strong>Double-Click AUTO</strong>: Clears and resets the stored learned calibration trim for the current amplifier and transformer model pairing.</li>
+      <li><strong>MATCH</strong>: Instantly locks the period-correct active amplifier and transformer topologies associated with the active EQ or compressor circuit.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- SECTION 06 -->
+<div id="sec-06" class="section-block">
+  <h2><span class="sec-num">06</span> Top Deck: ATR-102 Mastering Magnetic Tape Machine</h2>
+  <p>
+    The tape stage models 1/2-inch two-track magnetic mastering tape machines, including magnetic oxide saturation, ultrasonic record bias, low-frequency head contour resonance, and transport wow/flutter:
+  </p>
+  <div class="manual-fig" style="max-width: 740px; margin: 6px auto;">
+    <img src="visuals/screenshots/sec06_07_topdeck.png" alt="Top Deck: ATR-102 Tape Machine and 4x Linear Clipper">
+    <div class="manual-fig-caption">Figure 6.1 — Masteraid Top Deck: ATR-102 Tape Physics &amp; Precision 4x Linear Clipper</div>
+  </div>
+  <ul>
+    <li><strong>Dynamic High-Frequency Compander</strong>: Implements high-frequency pre-emphasis conditioning prior to tape saturation and complementary decoding on playback, reducing ultrasonic intermodulation and preventing high-frequency loss during heavy saturation.</li>
+    <li><strong>15 IPS vs 30 IPS Tape Speeds</strong>: 15 IPS (Inches Per Second) emphasizes lower-frequency head bump resonance and low-mid tape compression; 30 IPS delivers extended high-frequency linearity beyond 28 kHz with lower modulation noise.</li>
+    <li><strong>456 vs GP9 Tape Formulations</strong>: 456 (+6 dB operating level) produces standard magnetic tape saturation that rounds peak transients. GP9 (+9 dB operating level) provides higher headroom and lower harmonic distortion.</li>
+    <li><strong>DRIVE (-6 to +12 dB) &amp; BIAS (-10 to +10 dB)</strong>: Drive sets input signal level relative to the magnetic tape saturation curve. Bias adjusts the AC ultrasonic record bias current and high-frequency slew rate damping.</li>
+    <li><strong>HEAD BUMP (0 to 6 dB) &amp; BUMP FREQ (30 to 150 Hz)</strong>: Models the physical repro head contour effect. Adjusts the low-frequency resonant peak frequency (tunable from 30 to 150 Hz) with an active highpass filter to control sub-audible DC buildup.</li>
+    <li><strong>FLUTTER (0.0% to 100.0%)</strong>: Simulates mechanical transport irregularities and capstan flutter using uncorrelated stereo modulation.</li>
+    <li><strong>AUTO (Level Neutrality)</strong>: Level-matched saturation compensation counterbalancing input drive in real time to facilitate objective timbre evaluation.</li>
+  </ul>
+</div>
+
+
+<!-- SECTION 07 -->
+<div id="sec-07" class="section-block">
+  <h2><span class="sec-num">07</span> Top Deck: Mastering Clipper (Noise-Masked Soft Ceiling)</h2>
+  <p>
+    The mastering clipper applies 4x linear-phase oversampling to control peak crest factor prior to the limiter stage:
+  </p>
+  <ul>
+    <li><strong>Soft Ceiling</strong>: Applies smooth knee transition shaping to eliminate hard discontinuity artifacts, reducing peak levels with minimal disruption to the overall dynamic envelope.</li>
+    <li><strong>Soft vs Hard Shape</strong>: Soft knee progressively rounds transient peaks with odd-order harmonics; Hard knee clips strictly at the ceiling threshold with zero time-constant envelope alteration.</li>
+    <li><strong>DRIVE (-6.0 to +12.0 dB) &amp; CEILING (-6.0 to 0.0 dBTP)</strong>: Drive sets signal level into the clipping stage; Ceiling defines the maximum peak output.</li>
+    <li><strong>AUTO (Clipper)</strong>: Automatically compensates for drive gain so clipping intensity can be evaluated without shifts in perceived loudness.</li>
+    <li><strong>Fast Metering</strong>: Peak indicator displaying instantaneous peak attenuation in decibels per channel.</li>
+  </ul>
+</div>
+
+</div>
+
+<div class="page-box">
+<!-- SECTION 08 -->
+<div id="sec-08" class="section-block">
+  <h2><span class="sec-num">08</span> Right Wing: Brickwall Limiter & Broadcast Metering</h2>
+  <p>
+    The final stage combines a lookahead true-peak brickwall limiter with inter-sample peak detection and ITU-R BS.1770-4 / EBU R128 loudness metering:
+  </p>
+  <div class="sidebar-table-container">
+    <div class="sidebar-col">
+      <div class="sidebar-fig">
+        <img src="visuals/screenshots/sec08_limiter.png" alt="Right Wing: Brickwall Limiter & LUFS Broadcast Metering">
+        <div class="sidebar-fig-caption">Figure 8.1 — True-Peak Lookahead Limiter &amp; EBU R128 Loudness Display</div>
+      </div>
+    </div>
+    <div class="main-col">
+      <table class="table-box">
+        <thead>
+          <tr>
+            <th style="width: 24%;">Control / Meter</th>
+            <th style="width: 26%;">Range / Calibration</th>
+            <th>Engineering Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>IN (Limiter Bypass)</strong></td>
+            <td>Engaged / Bypassed</td>
+            <td>Engages or bypasses the limiting stage while loudness meters remain operational.</td>
+          </tr>
+          <tr>
+            <td><strong>GAIN</strong></td>
+            <td>0.0 dB to +18.0 dB</td>
+            <td>Limiter input drive pushing program material toward the ceiling.</td>
+          </tr>
+          <tr>
+            <td><strong>CEILING</strong></td>
+            <td>-6.0 dBTP to 0.0 dBTP</td>
+            <td>Sets the absolute True Peak output ceiling (standard recommendation -0.1 to -1.0 dBTP).</td>
+          </tr>
+          <tr>
+            <td><strong>LOOKAHEAD</strong></td>
+            <td>0.0 ms to 2.0 ms</td>
+            <td>Internal lookahead buffer allowing the limiter envelope to anticipate transient peaks without overshoot.</td>
+          </tr>
+          <tr>
+            <td><strong>RELEASE &amp; AUTO</strong></td>
+            <td>10 ms to 1000 ms &bull; Auto ON/OFF</td>
+            <td>Envelope recovery time. When Auto is engaged, release time dynamically lengthens on low-frequency content to prevent waveform distortion.</td>
+          </tr>
+          <tr>
+            <td><strong>SMOOTH PUNCH</strong></td>
+            <td>ON / OFF</td>
+            <td>Applies a lookahead envelope modifier that preserves initial transient edges during gain reduction.</td>
+          </tr>
+          <tr>
+            <td><strong>LIFT</strong></td>
+            <td>0.0% to 100.0%</td>
+            <td>Upward dynamic processor that raises low-level program content without increasing peak output ceiling.</td>
+          </tr>
+          <tr>
+            <td><strong>TRUE PK (True Peak)</strong></td>
+            <td>ON / OFF</td>
+            <td>Engages 4x oversampled inter-sample peak detection to prevent D/A inter-sample clipping.</td>
+          </tr>
+          <tr>
+            <td><strong>UNITY</strong></td>
+            <td>ON / OFF</td>
+            <td>Inverts limiter gain for gain-matched A/B comparison without volume bias.</td>
+          </tr>
+          <tr>
+            <td><strong>LUFS METERS</strong></td>
+            <td>Momentary, Short-Term, Integrated</td>
+            <td>EBU R128 compliant loudness metering. Alt+Click on the readout to reset integrated measurement.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="page-box">
+<!-- SECTION 09 & 10: PRESETS, THEMES & WORKFLOW -->
+<div id="sec-09" class="section-block" style="margin-bottom: 8px;">
+  <h2><span class="sec-num">09</span> Preset Management &amp; System Directory Paths</h2>
+  <p style="margin: 3px 0 5px 0;">
+    Masteraid stores presets as standalone <code>.mqnpreset</code> files in the standard operating system documents directory for instant cross-platform exchange:
+  </p>
+  <div class="callout" style="padding: 6px 10px; margin: 4px 0 6px 0; font-size: 8.0pt;">
+    <strong>Standard User Preset Locations:</strong>
+    <ul style="margin: 2px 0; padding-left: 18px;">
+      <li><strong>Windows</strong>: <code>%USERPROFILE%\Documents\MQNdsp\Masteraid\Presets\</code></li>
+      <li><strong>macOS</strong>: <code>~/Documents/MQNdsp/Masteraid/Presets/</code></li>
+      <li><strong>Linux</strong>: <code>~/Documents/MQNdsp/Masteraid/Presets/</code> (or <code>$XDG_DOCUMENTS_DIR/MQNdsp/Masteraid/Presets/</code>)</li>
+    </ul>
+  </div>
+  <p style="margin: 3px 0;">
+    Click the center preset display to browse the preset drawer. Click <strong>[ OPEN FOLDER ]</strong> to open the OS file manager directly. Presets placed in this directory become available immediately without restarting the host DAW.
+  </p>
+</div>
+
+<!-- SECTION 10: THEMES & WORKFLOW -->
+<div id="sec-10" class="section-block" style="margin-bottom: 8px;">
+  <h2><span class="sec-num">10</span> Dual Themes, A/B Comparison &amp; Shortcuts Reference</h2>
+  <div class="manual-fig" style="max-width: 620px; margin: 4px auto 6px auto; padding: 4px;">
+    <img src="visuals/screenshots/sec10_theme_compact_split.png" alt="Console Color Schemes: Dark Anodized Finish vs Light High-Contrast Aesthetic" style="max-height: 125px; width: auto; margin: 0 auto;">
+    <div class="manual-fig-caption" style="margin-top: 2px; font-size: 7.0pt;">Figure 10.1 — Dual Visual Schemes: Dark Studio Finish (Left) vs Light Smoked-Glass Aesthetic (Right)</div>
+  </div>
+
+  <p style="margin: 3px 0 5px 0;">
+    <strong>Visual Themes</strong>: Click <strong>☀</strong> (Sun) or <strong>☾</strong> (Moon) in the top header to toggle between Dark Mode (designed for low-light control rooms) and Light Mode (high-contrast daylight aesthetic).<br>
+    <strong>A/B Matrix</strong>: The lower-right illuminated <strong>A</strong> and <strong>B</strong> buttons allow instant auditioning between two independent mastering configurations with zero audio interruption.
+  </p>
+
+  <h3 style="margin: 6px 0 3px 0; font-size: 9.0pt;">Mouse &amp; Keyboard Shortcuts Reference</h3>
+  <table class="table-box" style="margin: 2px 0 6px 0; font-size: 7.8pt;">
+    <thead>
+      <tr>
+        <th style="width: 25%; padding: 3px 6px;">Action / Shortcut</th>
+        <th style="width: 23%; padding: 3px 6px;">Target Control</th>
+        <th style="padding: 3px 6px;">Operational Behavior</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 2px 6px;"><strong>Ctrl + Drag</strong> <small style="color:#777;">(Cmd on macOS)</small></td>
+        <td style="padding: 2px 6px;">Stepped or Continuous Knobs</td>
+        <td style="padding: 2px 6px;"><strong>Fine Precision</strong>: Bypasses stepped detents for ultra-smooth fine-tuning (0.0022 precision).</td>
+      </tr>
+      <tr>
+        <td style="padding: 2px 6px;"><strong>Alt + Click</strong> <small style="color:#777;">(Option on macOS)</small></td>
+        <td style="padding: 2px 6px;">Any Knob, Slider, or Switch</td>
+        <td style="padding: 2px 6px;"><strong>Reset Default</strong>: Restores the selected parameter to its calibrated default mastering value.</td>
+      </tr>
+      <tr>
+        <td style="padding: 2px 6px;"><strong>Double-Click</strong></td>
+        <td style="padding: 2px 6px;">Any Knob, Slider, or Switch</td>
+        <td style="padding: 2px 6px;"><strong>Quick Reset</strong>: Alternate one-handed shortcut to return any control to default.</td>
+      </tr>
+      <tr>
+        <td style="padding: 2px 6px;"><strong>Vertical Drag</strong></td>
+        <td style="padding: 2px 6px;">Stepped Knobs &amp; Selectors</td>
+        <td style="padding: 2px 6px;"><strong>Detent Snap</strong>: Snaps through calibrated inductor taps, Q bandwidths, or time constants.</td>
+      </tr>
+      <tr>
+        <td style="padding: 2px 6px;"><strong>Mouse Wheel</strong></td>
+        <td style="padding: 2px 6px;">Any Knob or Slider</td>
+        <td style="padding: 2px 6px;"><strong>Fine Step</strong>: Increments or decrements detents and values with tactile resolution.</td>
+      </tr>
+      <tr>
+        <td style="padding: 2px 6px;"><strong>Direct Click</strong></td>
+        <td style="padding: 2px 6px;">Buttons &amp; Model Selectors</td>
+        <td style="padding: 2px 6px;">Toggles bypass states, switches circuit models (PTEK/MASS, FAIR/V-MU), or cycles saturation tiers.</td>
+      </tr>
+      <tr>
+        <td style="padding: 2px 6px;"><strong>Alt + Click on LUFS</strong></td>
+        <td style="padding: 2px 6px;">LUFS Integrated / LRA Box</td>
+        <td style="padding: 2px 6px;"><strong>Reset Loudness</strong>: Resets EBU R128 integrated LUFS and LRA calculations for a new pass.</td>
+      </tr>
+      <tr>
+        <td style="padding: 2px 6px;"><strong>Book Icon (&#128214;) Button</strong></td>
+        <td style="padding: 2px 6px;">Top Navigation Header</td>
+        <td style="padding: 2px 6px;"><strong>Open Manual</strong>: Launches this technical reference guide in your system PDF viewer.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer-note" style="margin-top: 4px; padding-top: 3px; font-size: 7.0pt;">
+    &copy; MQN DSP. Masteraid Precision Analog-Modeled Mastering Console. Engineering Reference Manual. All rights reserved.
+  </div>
+</div>
+</div>
+
+</body>
+</html>

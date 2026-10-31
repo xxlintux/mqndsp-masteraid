@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44">
+  <defs>
+    
+  <!-- UPSTREAM 14-SEGMENT DISPLAY SMOKED GLASS LENS GRADIENT -->
+  <linearGradient id="mqn_smoked_lens_grad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#E2DED6"/>
+    <stop offset="100%" stop-color="#D4D0C8"/>
+  </linearGradient>
+
+  <!-- UPSTREAM 14-SEGMENT HARDWARE VFD/LED BLOOM FILTER -->
+  <filter id="dseg_bloom" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="soft_bloom"/>
+    <feColorMatrix in="soft_bloom" type="matrix" values="
+      1 0 0 0 0
+      0 1 0 0 0
+      0 0 1 0 0
+      0 0 0 0.75 0" result="tinted_bloom"/>
+    <feMerge>
+      <feMergeNode in="tinted_bloom"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+    
+  <!-- SMOKED GLASS PUSH BUTTON UNLIT (OFF) TINTED LENS GRADIENT -->
+  <linearGradient id="mqn_btn_smoked_off_grad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#E2DED6"/>
+    <stop offset="55%" stop-color="#DAD6CE"/>
+    <stop offset="100%" stop-color="#D4D0C8"/>
+  </linearGradient>
+
+  <!-- SMOKED GLASS CHAMFERED BEVEL RIM GRADIENT (EDGE-LIT IDLE STATE) -->
+  <linearGradient id="mqn_btn_bevel_rim_grad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#FF80BF" stop-opacity="0.78"/>
+    <stop offset="45%" stop-color="#FF007F" stop-opacity="0.45"/>
+    <stop offset="100%" stop-color="#FF3399" stop-opacity="0.72"/>
+  </linearGradient>
+
+  <!-- SMOKED GLASS CHAMFERED BEVEL RIM GRADIENT (BACKLIT ON STATE) -->
+  <linearGradient id="mqn_btn_bevel_rim_on_grad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#FFD6EB" stop-opacity="0.98"/>
+    <stop offset="50%" stop-color="#FF1E8E" stop-opacity="0.92"/>
+    <stop offset="100%" stop-color="#FF80BF" stop-opacity="0.98"/>
+  </linearGradient>
+
+  <!-- SMOKED GLASS PUSH BUTTON LIT (ON) BACKLIT MAGENTA LENS GRADIENT -->
+  <radialGradient id="mqn_btn_smoked_on_grad" cx="50%" cy="45%" r="65%">
+    <stop offset="0%" stop-color="#7A0C43"/>
+    <stop offset="58%" stop-color="#3D0622"/>
+    <stop offset="100%" stop-color="#1E0310"/>
+  </radialGradient>
+
+  <!-- SMOKED GLASS PUSH BUTTON SMASHED (EXTREME DRIVE) OVERDRIVEN CORE GRADIENT -->
+  <radialGradient id="mqn_btn_smoked_smashed_grad" cx="56%" cy="42%" r="68%">
+    <stop offset="0%" stop-color="#FF99CC"/>
+    <stop offset="28%" stop-color="#D4006A"/>
+    <stop offset="68%" stop-color="#630436"/>
+    <stop offset="100%" stop-color="#260214"/>
+  </radialGradient>
+
+    <style>
+      .t {
+        text-anchor: middle;
+        dominant-baseline: central;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+      }
+      
+    .btn-amber-lit {
+      fill: url(#mqn_btn_smoked_on_grad);
+      stroke: #FF4DA6;
+      stroke-opacity: 0.96;
+      stroke-width: 1.2px;
+    }
+    .btn-amber-smashed {
+      fill: url(#mqn_btn_smoked_smashed_grad);
+      stroke: #FFB3D9;
+      stroke-opacity: 1.0;
+      stroke-width: 1.35px;
+    }
+    .btn-amber-unlit {
+      fill: #DEDAD2;
+      stroke: #FF2491;
+      stroke-opacity: 0.42;
+      stroke-width: 1.05px;
+    }
+    .btn-bevel-unlit {
+      fill: none;
+      stroke: url(#mqn_btn_bevel_rim_grad);
+      stroke-width: 1.15px;
+      opacity: 0.72;
+    }
+    .btn-bevel-lit {
+      fill: none;
+      stroke: url(#mqn_btn_bevel_rim_on_grad);
+      stroke-width: 1.35px;
+      opacity: 0.96;
+      filter: url(#dseg_bloom);
+    }
+    .btn-bevel-smashed {
+      fill: none;
+      stroke: #FFE6F2;
+      stroke-width: 1.5px;
+      opacity: 1.0;
+      filter: url(#dseg_bloom);
+    }
+    .btn-text-lit {
+      fill: #FF66B2;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      font-size: 9.5px;
+      filter: url(#dseg_bloom);
+    }
+    .btn-text-smashed {
+      fill: #FFF0F7;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      font-size: 9.5px;
+      filter: url(#dseg_bloom);
+    }
+    .btn-text-unlit {
+      fill: #7A5268;
+      opacity: 0.84;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      font-size: 9.5px;
+    }
+
+    </style>
+  </defs>
+  <!-- UPSTREAM SQUARED SMOKED-GLASS PUSH BUTTON: push_off (state=off) -->
+<g id="btn_push_off" data-param="push_off" data-type="vintage-push" data-lit="0" data-state="0" data-cx="22.0" data-cy="22.0" style="cursor: pointer;">
+  <clipPath id="lens_clip_push_off"><rect x="3.0" y="3.0" width="38.0" height="38.0" rx="5.0"/></clipPath>
+  <rect x="0.0" y="0.0" width="44.0" height="44.0" rx="8.0" fill="#D0CDC6" stroke="#B5B2AA" stroke-width="1.0"/>
+  <rect x="1.5" y="1.5" width="41.0" height="41.0" rx="6.5" fill="#B8B5AE" stroke="#96938C" stroke-width="1.2"/>
+  <rect id="lens_push_off" x="3.0" y="3.0" width="38.0" height="38.0" rx="5.0" class="btn-amber-unlit"/>
+  <rect id="bevel_push_off" x="4.1" y="4.1" width="35.8" height="35.8" rx="4.0" class="btn-bevel-unlit" pointer-events="none"/>
+  <text id="txt_push_off" x="22.0" y="22.5" class="t btn-text-unlit" pointer-events="none">PUSH</text>
+  <rect id="glare_push_off" x="4.5" y="4.5" width="35.0" height="7.0" rx="3.2" fill="#FFFFFF" opacity="0.30" pointer-events="none"/>
+  <g id="smash_push_off" clip-path="url(#lens_clip_push_off)" opacity="0" pointer-events="none">
+    <polygon points="25.5,19.5 9.0,3.0 25.0,3.0" fill="#FFFFFF" opacity="0.14"/>    <polygon points="25.5,19.5 41.0,9.0 41.0,27.0" fill="#000000" opacity="0.24"/>    <polygon points="25.5,19.5 3.0,17.0 3.0,37.0" fill="#FF80BF" opacity="0.12"/>    <polygon points="25.5,19.5 13.0,41.0 35.0,41.0" fill="#FFFFFF" opacity="0.09"/>
+    <polygon points="21.3,17.5 24.7,14.7 29.5,16.9 30.3,21.7 26.0,24.5 21.0,21.9" fill="none" stroke="#FFE6F2" stroke-width="0.65" opacity="0.85"/>    <polygon points="16.0,15.0 23.5,9.3 34.0,13.5 35.7,24.3 27.7,30.7 16.7,26.0" fill="none" stroke="#FF99CC" stroke-width="0.55" opacity="0.72"/>
+    <path d="M 25.5 19.5 L 18.5 11.5 L 8.0 3.0 M 25.5 19.5 L 29.5 10.5 L 34.0 3.0 M 25.5 19.5 L 34.5 17.5 L 41.0 12.0 M 25.5 19.5 L 33.5 26.5 L 41.0 35.0 M 25.5 19.5 L 26.5 29.5 L 29.5 41.0 M 25.5 19.5 L 18.5 27.5 L 9.0 41.0 M 25.5 19.5 L 14.5 21.5 L 3.0 26.0 M 25.5 19.5 L 15.5 16.5 L 3.0 13.0" fill="none" stroke="#14000A" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" opacity="0.82" transform="translate(0.4, 0.5)"/>
+    <path d="M 25.5 19.5 L 18.5 11.5 L 8.0 3.0 M 25.5 19.5 L 29.5 10.5 L 34.0 3.0 M 25.5 19.5 L 34.5 17.5 L 41.0 12.0 M 25.5 19.5 L 33.5 26.5 L 41.0 35.0 M 25.5 19.5 L 26.5 29.5 L 29.5 41.0 M 25.5 19.5 L 18.5 27.5 L 9.0 41.0 M 25.5 19.5 L 14.5 21.5 L 3.0 26.0 M 25.5 19.5 L 15.5 16.5 L 3.0 13.0" fill="none" stroke="#FFF0F8" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    <circle cx="25.5" cy="19.5" r="1.6" fill="#FFFFFF" opacity="0.95"/>
+  </g>
+</g>
+</svg>

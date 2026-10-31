@@ -1,0 +1,27 @@
+PRESET:ANALOG TAPE GLUE
+tape_speed_30ips=1
+tape_formula_gp9=0
+tape_drive=2.500
+tape_bias=-1.500
+tape_bump=3.000
+tape_bump_freq=70.0
+tape_flutter=12.000
+clipper_drive=1.000
+clipper_ceiling=-0.200
+clipper_hard_shape=0
+clipper_os_4x=1
+eq_model=Ptek
+comp_model=Fair
+comp_thresh=-8.000
+comp_ratio=2.500
+comp_attack=0.400
+comp_release=800.000
+comp_mix=100.000
+limiter_gain=1.500
+limiter_ceiling=-0.200
+limiter_lookahead=1.200
+limiter_release=0.000
+limiter_lift=0.000
+limiter_true_peak=1
+limiter_punch=1
+END_PRESET

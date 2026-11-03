@@ -43,11 +43,10 @@ Masteraid wouldn't exist without his decades of public research. **If this plugi
 
 ---
 
-## Distribution Model: Open Source & The $5 Binary
+## Distribution Model: Open Source & Pay What You Want
 
-- **Source Code is 100% Free**: Masteraid is open source under the MIT license right here on GitHub. If you are on Linux or enjoy building from source, you can clone, compile, and use it freely.
-- **$5 Convenience Fee**: Pre-compiled binaries and the automated Windows Setup Installer (`.exe`) are available on Ko-fi for **$5**, helping recoup the time and costs put into designing and polishing the project.
-- **Zero DRM / Share Friendly**: No iLok, no license dongles, no phone-home servers, and no machine limits. If you choose to share the installer with a bandmate or friend, that’s up to you—I’m not policing your files.
+- **Source Code is 100% Free:** Masteraid is open source under the MIT license on GitHub. Clone, build, modify, and use it freely. Linux users and anyone comfortable compiling from source can get everything at no cost.
+- **Pay What You Want:** Pre-compiled binaries and the automated Windows Setup Installer (.exe) are available on Ko-fi. Choose what you want to pay, whether it's nothing or a contribution to support development.
 
 ---
 
@@ -79,7 +78,17 @@ $$\mathbf{Input\ Stage} \longrightarrow \mathbf{Master\ Filtering} \longrightarr
 
 ## Windows Installer
 
-A dedicated Inno Setup Windows installer is provided in `installer/`:
+The automated Windows Setup Wizard is available as a pre-compiled download through Ko-fi. Its source script is included in `installer/` for anyone who wants to build it themselves.
+
+To compile the installer manually:
+
+```powershell
+iscc installer\Masteraid_Setup.iss
+```
+
+The setup wizard provides:
+- Component selection: CLAP, VST3, Factory Presets, and Interactive User Reference Manual (PDF).
+- Selectable installation directories for each format, defaulting to industry-standard plugin locations and `%USERPROFILE%\Documents\MQNdsp\Masteraid\Presets\`.
 
 ```powershell
 # Compile the installer executable into dist/
